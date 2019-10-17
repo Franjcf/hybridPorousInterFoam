@@ -1,0 +1,41 @@
+
+hybridMultiphaseFoam for OpenFOAM
+
+* General Information: 
+
+- This toolbox is compatible with OpenFOAM 4.0 and later.
+
+- This toolbox needs only a standard OpenFOAM installation (see www.openfoam.org)
+
+- Please cite the related papers in the "doc" folder if you are using this toolbox.
+
+- Read the LICENCE_OPENFOAM file for information about OpenFOAM and this toolbox Copyrights.
+
+* Installation instructions: 
+
+- First, source the OpenFOAM configuration file, i.e. (example for ubuntu version) : 
+   source /opt/openfoam4x/etc/bashrc
+
+- then in the "porousMultiphaseFoam" directory, run :
+
+	./Allwmake
+
+  to install the package.
+
+- The Dynamic libraries,"lporousInterfaceProperties.so", "libporousModels.so" and 
+  "lporousImmiscibleIncompressibleTwoPhaseMixture.so" are compiled in the standard
+   OpenFOAM user directory : $FOAM_USER_LIBBIN;
+
+- The executable solver "hybridMultiphaseFoam" is placed in the standard OpenFOAM user
+  directory $FOAM_USER_APPBIN.
+
+- Each tutorial directory contains "run" and "clean" files to test installation
+  and validate the solver.
+
+- To remove temporary files AND dynamic librairies AND executables, run :
+
+	./Allwclean
+
+- see the ReleaseNotes.txt file for detailed information about the toolbox.
+
+**************************************************************************

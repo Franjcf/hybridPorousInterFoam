@@ -1,0 +1,56 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+phases (wetting nonWetting);
+
+wetting 
+{
+    transportModel  Newtonian;
+    nu              [0 2 -1 0 0 0 0] 1e-6;
+    rho             [1 -3 0 0 0 0 0] 1000;
+}
+
+nonWetting 
+{
+    transportModel  Newtonian;
+    nu              [0 2 -1 0 0 0 0] 1.25e-4; 
+    rho             [1 -3 0 0 0 0 0] 800;
+}
+
+sigma            [1 0 -2 0 0 0 0]  0.15;
+
+activateCapillarity            0;
+
+activatePorousContactAngle     1;
+
+theta0 			       45;
+
+alpha.wettingmin           alpha.wettingmin [0  0  0 0 0 0 0] 0.001;
+alpha.wettingmax           alpha.wettingmax [0  0  0 0 0 0 0] 0.999;
+
+relativePermeabilityModel  VanGenuchten;
+capillarityModel           VanGenuchten;
+
+VanGenuchtenCoeffs
+{
+    alpha.wettingminpc alpha.wettingminpc [0 0 0 0 0 0 0] 0;
+    alpha.wettingmaxpc alpha.wettingmaxpc [0 0 0 0 0 0 0] 1;
+    pc0 pc0 [1 -1 -2 0 0 0 0] 0;
+    m 0.5;
+}
+
+// ************************************************************************* //

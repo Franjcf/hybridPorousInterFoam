@@ -1,0 +1,251 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+defaultFieldValues
+(
+    volScalarFieldValue epss 0.6
+    volScalarFieldValue alpha.wetting 0
+);
+
+regions
+(
+
+     boxToCell //left boundary
+    {
+        box (0 0 0) (0.025 0.4 1);
+        fieldValues
+        (
+	    volScalarFieldValue alpha.wetting 1
+            volScalarFieldValue epss 1e-20
+            volScalarFieldValue k1 1e20
+	    volScalarFieldValue k2 1e20
+        );
+    }
+
+//First collumn from the left
+    boxToCell
+    {
+        box (0.025 0 0) (0.275 0.02 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e20
+	    volScalarFieldValue k2 1e20
+            volScalarFieldValue epss 1e-20
+        );
+    }
+
+    boxToCell
+    {
+        box (0.025 0.02 0) (0.275 0.12 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e20
+	    volScalarFieldValue k2 1e20
+            volScalarFieldValue epss 1e-20
+        );
+    }
+
+    boxToCell
+    {
+        box (0.025 0.12 0) (0.275 0.22 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e20
+	    volScalarFieldValue k2 1e20
+            volScalarFieldValue epss 1e-20
+        );
+    }
+	
+    boxToCell
+    {
+        box (0.025 0.22 0) (0.275 0.32 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e20
+	    volScalarFieldValue k2 1e20
+            volScalarFieldValue epss 1e-20
+        );
+    }
+
+     boxToCell
+    {
+        box (0.025 0.32 0) (0.275 0.42 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e20
+	    volScalarFieldValue k2 1e20
+            volScalarFieldValue epss 1e-20
+        );
+    }
+
+//second column from the left
+ boxToCell
+    {
+        box (0.275 0 0) (0.525 0.02 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e-13
+	    volScalarFieldValue k2 1e-13
+        );
+    }
+
+    boxToCell
+    {
+        box (0.275 0.02 0) (0.525 0.12 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 3e-13
+	    volScalarFieldValue k2 3e-13
+        );
+    }
+
+    boxToCell
+    {
+        box (0.275 0.12 0) (0.525 0.22 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 2e-13
+	    volScalarFieldValue k2 2e-13
+        );
+    }
+	
+    boxToCell
+    {
+        box (0.275 0.22 0) (0.525 0.32 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 4e-13
+	    volScalarFieldValue k2 4e-13
+        );
+    }
+
+     boxToCell
+    {
+        box (0.275 0.32 0) (0.525 0.42 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e-13
+	    volScalarFieldValue k2 1e-13
+        );
+    }
+
+//third column from the left
+ boxToCell
+    {
+        box (0.525 0 0) (0.775 0.02 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 3e-13
+	    volScalarFieldValue k2 3e-13
+        );
+    }
+
+    boxToCell
+    {
+        box (0.525 0.02 0) (0.775 0.12 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 2e-13
+	    volScalarFieldValue k2 2e-13
+        );
+    }
+
+    boxToCell
+    {
+        box (0.525 0.12 0) (0.775 0.22 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 4e-13
+	    volScalarFieldValue k2 4e-13
+        );
+    }
+	
+    boxToCell
+    {
+        box (0.525 0.22 0) (0.775 0.32 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e-13
+	    volScalarFieldValue k2 1e-13
+        );
+    }
+
+     boxToCell
+    {
+        box (0.525 0.32 0) (0.775 0.42 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 3e-13
+	    volScalarFieldValue k2 3e-13
+        );
+    }
+
+//fourth column from the left
+ boxToCell
+    {
+        box (0.775 0 0) (1 0.02 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 2e-13
+	    volScalarFieldValue k2 2e-13
+        );
+    }
+
+    boxToCell
+    {
+        box (0.775 0.02 0) (1 0.12 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 4e-13
+	    volScalarFieldValue k2 4e-13
+        );
+    }
+
+    boxToCell
+    {
+        box (0.775 0.12 0) (1 0.22 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 1e-13
+	    volScalarFieldValue k2 1e-13
+        );
+    }
+	
+    boxToCell
+    {
+        box (0.775 0.22 0) (1 0.32 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 3e-13
+	    volScalarFieldValue k2 3e-13
+        );
+    }
+
+     boxToCell
+    {
+        box (0.775 0.32 0) (1 0.42 1);
+        fieldValues
+        (
+            volScalarFieldValue k1 2e-13
+	    volScalarFieldValue k2 2e-13
+        );
+    }
+
+);
+
+
+// ************************************************************************* //

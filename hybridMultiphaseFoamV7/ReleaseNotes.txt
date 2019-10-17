@@ -1,0 +1,53 @@
+
+V1.0 (2019-10) ===> First release of the toolbox 
+
+## Solvers 
+
+- hybridMultiphaseFoam
+
+     - A new, real multi-scale solver for multiphase flow in porous media
+
+## Tutorials
+
+- Darcy Flow Cases 
+
+    - Test cases regarding the verification of the solver in a domain
+      completely occupied by porous media (Buckley-Leverett and
+      determination of a capillarity-gravity equilibirum)  
+
+- Free Flow Cases
+    
+     - Test cases regarding the verification of the same solver in a
+       domain where there is no porous media or just a porous media 
+       boundary (capillary-driven flows, contact angle implementations, 
+       Bretherton thin film-dynamics)
+
+- Example Applications
+	
+     - Sample cases that show the multi-scale nature of this solver by
+       simulating systems with a combination of porous and free-fluid
+       regions (fractures, coastal barriers, drainage, imbibition,
+       porous fluid reservoir).     
+
+## Libraries
+
+- porousInterfaceProperties
+
+     - addition of a constant contact angle interface condition at the porous media-fluid interface. 
+
+- porousImmicscibleIncompressibleTwoPhaseMixture
+
+     - addition of an immicisble incompressible two-phase fluid class that allows for the use of
+       porousInterfaceProperties
+
+- capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+
+     - usual capillary models for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten, Linear)
+
+- phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+
+     - incompressible phase model for poroous media flows (constant density and viscosity)
+
+- relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+
+     - usual relative permeability laws for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten)

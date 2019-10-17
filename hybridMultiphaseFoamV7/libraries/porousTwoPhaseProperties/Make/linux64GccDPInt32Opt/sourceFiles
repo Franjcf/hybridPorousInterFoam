@@ -1,0 +1,7 @@
+SOURCE = \
+alphaContactAngle/alphaContactAngle/alphaContactAngleFvPatchScalarField.C \
+alphaContactAngle/constantAlphaContactAngle/constantAlphaContactAngleFvPatchScalarField.C \
+alphaContactAngle/temperatureDependentAlphaContactAngle/temperatureDependentAlphaContactAngleFvPatchScalarField.C \
+alphaContactAngle/dynamicAlphaContactAngle/dynamicAlphaContactAngleFvPatchScalarField.C \
+alphaContactAngle/timeVaryingAlphaContactAngle/timeVaryingAlphaContactAngleFvPatchScalarField.C \
+alphaFixedPressure/alphaFixedPressureFvPatchScalarField.C 

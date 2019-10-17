@@ -1,0 +1,143 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1e-3;
+
+lxtop  1.5;
+lxbot -0.5;
+
+lx0 0;
+ly0 0;
+lz0 0;
+
+lx1 1;
+ly1 20;
+lz1 1;
+
+
+vertices
+(
+    ($lx0 $ly0 $lz0)    //0
+    ($lx1 $ly0 $lz0)    //1
+    ($lx1 $ly1 $lz0)    //2
+    ($lx0 $ly1 $lz0)    //3
+    ($lx0 $ly0 $lz1)    //4
+    ($lx1 $ly0 $lz1)    //5
+    ($lx1 $ly1 $lz1)    //6
+    ($lx0 $ly1 $lz1)    //7
+
+    ($lxtop $ly0 $lz0)    //8
+    ($lxtop $ly0 $lz1)    //9
+    ($lxtop $ly1 $lz1)    //10
+    ($lxtop $ly1 $lz0)    //11
+
+    ($lxbot $ly0 $lz0)    //12
+    ($lxbot $ly0 $lz1)    //13
+    ($lxbot $ly1 $lz1)    //14
+    ($lxbot $ly1 $lz0)    //15
+);
+
+blocks
+(
+
+    hex (1 8 11 2 5 9 10 6) (10 400 1) simpleGrading (1 1 1)
+
+    hex (0 1 2 3 4 5 6 7) (20 400 1)
+    simpleGrading ( 
+    ( 
+       (20 30 4)
+       (60 40 1)
+       (20 30 0.25)
+    )
+    1
+    1)
+
+    hex (12 0 3 15 13 4 7 14) (10 400 1) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    atmosphere
+    {
+        type ptach;
+        faces
+        (
+           (3 7 6 2)
+        );
+    }
+    
+    topPorous
+    {
+        type ptach;
+        faces
+        (
+           (15 14 7 3)
+	   (2 6 10 11)
+        );
+    }
+
+    walls
+    {
+        type wall;
+        faces
+        (
+          (12 13 14 15)
+	  (8 11 10 9)
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (1 5 4 0)
+        );
+    }
+    inletPorous
+    {
+        type patch;
+        faces
+        (
+            (0 4 13 12)
+            (8 9 5 1)
+        );
+    }
+
+    frontAndBack
+    {
+        type empty;
+        faces
+        (
+            (0 3 2 1)
+            (12 15 3 0)
+            (1 2 11 8)
+            
+            (4 5 6 7)
+	    (13 4 7 14)
+            (5 9 10 6)
+        );
+    }
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //

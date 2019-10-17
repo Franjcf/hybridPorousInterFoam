@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    // selecting volume of free space and creating a cell set. (leaving solid out)
+    {
+        name    freeSpace;
+        type    cellSet;
+        action  new;
+        source  fieldToCell; // fieldToCell FIELD MIN MAX //or boxToCell;
+        sourceInfo
+        {
+        field epss;
+	min 0;
+	max 0.99; 
+        }
+    }
+);
+
+//then run "subsetMesh -overwrite freeSpace" to change mesh
+//the boundary faces are going to be labeled as "oldInternalFaces"
+//then go to constant/polymesh/boundaryes and change the patch type from "empty" to wall. Then also change the boundary conditions on all fields.
+
+
+
+// selecting the faces of the solid
+//    {
+//        name    solidFaces;
+//        type    faceSet;
+//        action  new;
+//        source  cellToFace;
+//        sourceInfo
+//        {
+//        set        Solid;
+//        option    all;
+//        }
+//    }
+
+//could also then remove faces that are "inside solidFaces by doing delete "option both" (only faces in which both neighbors are in solidFaces will be deleted
+
+// selecting the faces of the solid
+//    {
+//        name    solidFaces;
+//        type    faceSet;
+//        action  delete;
+//        source  cellToFace;
+//        sourceInfo
+//        {
+//        set        Solid;
+//        option     both;
+//        }
+//    }
+
+//remove all the solid cells but not the faces (will just leave the outside faces)
+//    {
+//        name    Solid;
+//        type    cellSet;
+//        action  delete;
+//        source  cellToCell; // fieldToCell FIELD MIN MAX //or boxToCell;
+//        sourceInfo
+//        {
+//	set Solid;
+//        }
+//    }
+//);
+
+// ************************************************************************* //
