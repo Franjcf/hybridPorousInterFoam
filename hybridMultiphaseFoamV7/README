@@ -3,7 +3,7 @@ hybridMultiphaseFoam for OpenFOAM
 
 * General Information: 
 
-- This toolbox is compatible with OpenFOAM 4.0 and later.
+- This toolbox is compatible with OpenFOAM 7.0 and later.
 
 - This toolbox needs only a standard OpenFOAM installation (see www.openfoam.org)
 
