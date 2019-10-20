@@ -168,7 +168,7 @@
             Info<< "Applying the previous iteration compression flux" << endl; 
             MULES::correct
             (
-                geometricOneField(),
+                eps,
                 alpha1,
                 alphaPhi,
                 talphaPhiCorr0.ref(),
@@ -222,7 +222,7 @@
  
             MULES::correct
             (
-                geometricOneField(),
+                eps, 
                 alpha1,
                 talphaPhiUn(),
                 talphaPhiCorr.ref(),
@@ -246,7 +246,7 @@
             alphaPhi = talphaPhiUn; 
             MULES::explicitSolve
             (
-                geometricOneField(),
+                eps,
                 alpha1,
                 phiCN,
                 alphaPhi,

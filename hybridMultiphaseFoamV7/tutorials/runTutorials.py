@@ -62,9 +62,9 @@ class testCase:
 
             else:
 
-                print "[ OK ]"
-
                 subprocess.Popen("./clean", shell=True)
+        
+                print "[ OK ]"
 
             os.chdir(refDir)
 

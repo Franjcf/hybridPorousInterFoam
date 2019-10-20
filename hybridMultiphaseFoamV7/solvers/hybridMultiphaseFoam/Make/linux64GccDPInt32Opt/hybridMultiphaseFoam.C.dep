@@ -8,7 +8,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CrankNicolsonDdtScheme.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/subCycle.H \
 ../../libraries/porousImmiscibleIncompressibleTwoPhaseMixture/lnInclude/porousImmiscibleIncompressibleTwoPhaseMixture.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleControl.H \
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CorrectPhi.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvcSmooth.H \
 ../../libraries/porousModels/lnInclude/capillarityModel.H \
 ../../libraries/porousModels/lnInclude/relativePermeabilityModel.H \
@@ -21,7 +20,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/createTimeControls.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/createRDeltaT.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/initContinuityErrs.H \
 createFields.H \
-correctPhi.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readTimeControls.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CourantNo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/setInitialDeltaT.H \
@@ -72,11 +70,10 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionConvergenceControl.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionCorrectorConvergenceControl.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleControlI.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFieldsFwd.H \
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H \
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CorrectPhi.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOdictionary.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/typeInfo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/runTimeSelectionTables.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/dimensionedScalar.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tmp.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/autoPtr.H \
@@ -90,9 +87,9 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readGravitationalAcceleration.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readhRef.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/gh.H \
 createPorousMediaFields.H \
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/continuityErrs.H \
 alphaEqn.H \
 correctUBc.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/continuityErrs.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Pstream.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOstreams.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/TimePaths.H \
@@ -213,7 +210,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/correctorConvergenceControl.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleLoopI.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControl.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControl.H \
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControl.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/baseIOdictionary.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/error.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/token.H \
@@ -378,7 +374,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/correctorConvergenceControlTemplate
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControlTemplates.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlTemplates.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlI.H \
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControlI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/messageStream.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/errorManip.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tokenI.H \
@@ -526,6 +521,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/flipOp.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FieldFunctions.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvsPatchFieldsFwd.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvsPatchField.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControl.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fluidSolutionControlI.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControlI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.H \
@@ -652,6 +648,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveEntryTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FieldReuseFunctions.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FieldFunctionsM.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvsPatchField.C \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControlI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/foamVersion.H \
@@ -843,7 +840,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CrankNicolsonDdtScheme.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/subCycle.H :
 ../../libraries/porousImmiscibleIncompressibleTwoPhaseMixture/lnInclude/porousImmiscibleIncompressibleTwoPhaseMixture.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleControl.H :
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CorrectPhi.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvcSmooth.H :
 ../../libraries/porousModels/lnInclude/capillarityModel.H :
 ../../libraries/porousModels/lnInclude/relativePermeabilityModel.H :
@@ -856,7 +852,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/createTimeControls.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/createRDeltaT.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/initContinuityErrs.H :
 createFields.H :
-correctPhi.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readTimeControls.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CourantNo.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/setInitialDeltaT.H :
@@ -907,11 +902,10 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionConvergenceControl.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionCorrectorConvergenceControl.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleControlI.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFieldsFwd.H :
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H :
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CorrectPhi.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOdictionary.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/typeInfo.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/runTimeSelectionTables.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/dimensionedScalar.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tmp.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/autoPtr.H :
@@ -925,9 +919,9 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readGravitationalAcceleration.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readhRef.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/gh.H :
 createPorousMediaFields.H :
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/continuityErrs.H :
 alphaEqn.H :
 correctUBc.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/continuityErrs.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Pstream.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOstreams.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/TimePaths.H :
@@ -1048,7 +1042,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/correctorConvergenceControl.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleLoopI.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControl.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControl.H :
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControl.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/baseIOdictionary.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/error.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/token.H :
@@ -1213,7 +1206,6 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/correctorConvergenceControlTemplate
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControlTemplates.C :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlTemplates.C :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlI.H :
-$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControlI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/messageStream.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/errorManip.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tokenI.H :
@@ -1361,6 +1353,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/flipOp.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FieldFunctions.C :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvsPatchFieldsFwd.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvsPatchField.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControl.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fluidSolutionControlI.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControlI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.H :
@@ -1487,6 +1480,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveEntryTemplates.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FieldReuseFunctions.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FieldFunctionsM.C :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvsPatchField.C :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControlI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/foamVersion.H :

@@ -21,9 +21,9 @@ startFrom       latestTime;
 
 startTime       0;
 
-stopAt          endTime;
+stopAt          writeNow; //endTime;
 
-endTime         3000; //130000;
+endTime         130000;
 
 deltaT          1e-5;
 

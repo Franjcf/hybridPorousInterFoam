@@ -21,9 +21,9 @@ startFrom       startTime;
 
 startTime       0;
 
-stopAt          endTime;
+stopAt          writeNow; //endTime;
 
-endTime         1e-4; //0.002;
+endTime         0.002;
 
 deltaT          1e-6;
 

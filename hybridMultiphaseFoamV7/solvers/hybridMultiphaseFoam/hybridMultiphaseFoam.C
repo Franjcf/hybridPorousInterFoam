@@ -44,9 +44,7 @@ Description
 #include "CrankNicolsonDdtScheme.H"
 #include "subCycle.H"
 #include "porousImmiscibleIncompressibleTwoPhaseMixture.H"
-//#include "turbulentTransportModel.H"
 #include "pimpleControl.H"
-#include "CorrectPhi.H"
 #include "localEulerDdtScheme.H"
 #include "fvcSmooth.H"
 
@@ -66,8 +64,7 @@ int main(int argc, char *argv[])
     #include "createRDeltaT.H"
     #include "initContinuityErrs.H"
     #include "createFields.H"
-    #include "correctPhi.H"
-
+	
     //turbulence->validate();
 
     if (!LTS)
