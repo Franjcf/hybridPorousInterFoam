@@ -5,7 +5,7 @@ tutorials = [
 	     # Darcy Flow Validation
              {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/injectionCase"}, \
              {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/gravityCase"}, \
-            # {'category' : "hybridMultiphaseFoam", 'case' : "PorousCapillaryRise/porousCapillaryRise"}, \
+             {'category' : "DarcyFlowCases", 'case' : "GravityCapillarityBalance/porousCapillaryRise"}, \
             
 	     # Free-Fluid Validation          
              {'category' : "FreeFlowCases", 'case' : "Bretherton/porousBoundary"}, \

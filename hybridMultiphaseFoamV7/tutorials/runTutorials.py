@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ## \file runTutorials.py
 ## Script for running all validations cases
-## adapted from impesFOAM source code in Hourge P. et al (2014))
+## adapted from impesFOAM source code in Hourge P. et al (2014)
 
 # import
 from __future__ import with_statement

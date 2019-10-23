@@ -40,6 +40,11 @@ V1.0 (2019-10) ===> First release of the toolbox
      - addition of an immicisble incompressible two-phase fluid class that allows for the use of
        porousInterfaceProperties
 
+- porousTwoPhaseProperties
+
+     - defenition of two-phase fluid properties that allows for the use of
+       porousInterfaceProperties
+
 - capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
      - usual capillary models for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten, Linear)

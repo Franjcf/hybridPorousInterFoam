@@ -106,6 +106,9 @@ namespace Foam
       void correct()
       {
         Se_ == (Sb_-Sminpc_)/(Smaxpc_ - Sminpc_);
+        Se_.max(1e-4);        
+	Se_.min(1-1e-4);
+
         pc_ = pc0_ * pow(Se_,-alpha_);
         dpcdS_= -alpha_*pc0_*(pow(Se_,-alpha_-1))/(Smaxpc_-Sminpc_);
       }
