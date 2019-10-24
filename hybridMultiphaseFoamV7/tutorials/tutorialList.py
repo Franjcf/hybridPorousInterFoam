@@ -7,7 +7,7 @@ tutorials = [
              {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Gravity_Driven_BrooksCorey"}, \
 	     {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Flow_Driven_VanGenuchten"}, \
              {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Gravity_Driven_VanGenuchten"}, \
-             {'category' : "DarcyFlowCases", 'case' : "GravityCapillarityBalance/porousCapillaryRise"}, \
+             {'category' : "DarcyFlowCases", 'case' : "GravityCapillarityBalance/Gravity_Capillarity_VanGenuchten"}, \
             
 	     # Free-Fluid Validation          
              {'category' : "FreeFlowCases", 'case' : "Bretherton/porousBoundary"}, \
