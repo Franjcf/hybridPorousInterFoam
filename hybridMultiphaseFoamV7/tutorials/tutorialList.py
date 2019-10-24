@@ -3,8 +3,10 @@
 
 tutorials = [
 	     # Darcy Flow Validation
-             {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/injectionCase"}, \
-             {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/gravityCase"}, \
+             {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Flow_Driven_BrooksCorey"}, \
+             {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Gravity_Driven_BrooksCorey"}, \
+	     {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Flow_Driven_VanGenuchten"}, \
+             {'category' : "DarcyFlowCases", 'case' : "Buckley-Leverett/Gravity_Driven_VanGenuchten"}, \
              {'category' : "DarcyFlowCases", 'case' : "GravityCapillarityBalance/porousCapillaryRise"}, \
             
 	     # Free-Fluid Validation          
