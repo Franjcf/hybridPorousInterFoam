@@ -25,11 +25,11 @@ boundaryField
     {
         type            empty;
     }
-    leftWall //top
+    top
     {
         type            zeroGradient;
     }
-    rightWall //bottom
+    bottom
     {
         type            fixedValue;
         value           uniform (0 0 0);

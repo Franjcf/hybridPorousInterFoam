@@ -15,15 +15,18 @@ FoamFile
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-convertToMeters 1;
+convertToMeters 1e-3;
 
 lx0 0;
-ly0 0;
+ly0 0.181; 
 lz0 0;
 
-lx1 0.1;
-ly1 1;
+lx1 1.217;
+ly1 0.346; 
 lz1 0.1;
+
+lytop  0.470;
+lybot  0;
 
 vertices
 (
@@ -36,11 +39,27 @@ vertices
     ($lx1 $ly1 $lz1)    //6
     ($lx0 $ly1 $lz1)    //7
 
+    ($lx0 $lytop $lz0)    //8
+    ($lx1 $lytop $lz0)    //9
+    ($lx1 $lytop $lz1)    //10
+    ($lx0 $lytop $lz1)    //11
+
+    ($lx0 $lybot $lz0)    //12
+    ($lx1 $lybot $lz0)    //13
+    ($lx1 $lybot $lz1)    //14
+    ($lx0 $lybot $lz1)    //15
+
 );
 
 blocks
 (
-    hex (0 1 2 3 4 5 6 7) (1 1500 1) simpleGrading (1 1 1)
+
+    hex (12 13 1 0 15 14 5 4) (1217 181 1) simpleGrading (1 1 1)
+
+    hex (0 1 2 3 4 5 6 7) (1217 165 1) simpleGrading (1 1 1)
+
+    hex (3 2 9 8 7 6 10 11) (1217 124 1) simpleGrading (1 1 1)
+
 );
 
 edges
@@ -49,44 +68,77 @@ edges
 
 boundary
 (
-   frontAndBack
+    top
+    {
+        type patch;
+        faces
+        (
+            (8 11 10 9)
+        );
+    }
+    leftFace
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+
+    leftPorous
+    {
+        type patch;
+        faces
+        (
+            (3 7 11 8)
+            (12 15 4 0)
+        );
+    }
+    rightFace
+    {
+        type patch;
+        faces
+        (
+            (1 2 6 5)
+        );
+    }
+
+    rightPorous
+    {
+        type patch;
+        faces
+        (
+            (2 9 10 6)
+            (13 1 5 14)
+        );
+    }
+
+    bottom
+    {
+        type patch;
+        faces
+        (
+            (13 14 15 12)
+        );
+    }
+    frontAndBack
     {
         type empty;
         faces
         (
+            (12 0 1 13)
             (0 3 2 1)
-            (4 5 6 7)
-	    (2 6 5 1)
-            (0 4 7 3)
-        );
-    }
-    
-    //bottom
-    //{
-    //    type patch;
-    //    faces
-    //    (
-    //        (1 5 4 0)
-    //    );
-    //}
+	    (3 8 9 2)
 
-    leftWall
-    {
-        type patch;
-        faces
-        (
-            
-	    (3 7 6 2)
+            (15 14 5 4)
+            (4 5 6 7)
+	    (7 6 10 11)
         );
     }
-    rightWall
-    {
-        type patch;
-        faces
-        (
-            (1 5 4 0)
-        );
-    }
+);
+
+mergePatchPairs
+(
 );
 
 // ************************************************************************* //

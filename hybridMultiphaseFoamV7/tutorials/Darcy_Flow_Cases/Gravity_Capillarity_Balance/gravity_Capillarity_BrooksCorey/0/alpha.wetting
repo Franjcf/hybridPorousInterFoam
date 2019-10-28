@@ -1529,11 +1529,11 @@ boundaryField
     {
         type            empty;
     }
-    leftWall
+    top
     {
         type            zeroGradient;
     }
-    rightWall
+    bottom
     {
         type            zeroGradient;
     }
