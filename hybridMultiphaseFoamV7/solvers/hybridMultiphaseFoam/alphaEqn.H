@@ -119,9 +119,9 @@
 	      //Same as: Ur = U1/phiS1 -(U2)/phiS2 at the boundary
               phirPoreBf[patchi] =
             		  (Uwetting.boundaryField()[patchi] & mesh.Sf().boundaryField()[patchi])
-             		 /(eps.boundaryField()[patchi]*alpha1.boundaryField()[patchi] + SMALL)
+             		 /(eps.boundaryField()[patchi]*alpha1.boundaryField()[patchi] + 0.001)
                      	 -(UnonWetting.boundaryField()[patchi] & mesh.Sf().boundaryField()[patchi])
-                     	 /(eps.boundaryField()[patchi]*(1-alpha1.boundaryField()[patchi]) + SMALL);
+                     	 /(eps.boundaryField()[patchi]*(1-alpha1.boundaryField()[patchi]) + 0.001);
 	}
     }
 
@@ -166,13 +166,14 @@
         if (alphaApplyPrevCorr && talphaPhiCorr0.valid())
         {
             Info<< "Applying the previous iteration compression flux" << endl; 
-            MULES::correct
+            
+	    MULES::correct
             (
                 eps,
                 alpha1,
                 alphaPhi,
                 talphaPhiCorr0.ref(),
-                oneField(),
+		oneField(),
                 zeroField()
             );
 
@@ -222,10 +223,12 @@
  
             MULES::correct
             (
-                eps, 
+                eps,
                 alpha1,
                 talphaPhiUn(),
                 talphaPhiCorr.ref(),
+		zeroField(),
+		zeroField(),
                 oneField(),
                 zeroField()
             );
@@ -250,7 +253,9 @@
                 alpha1,
                 phiCN,
                 alphaPhi,
-                oneField(),
+		zeroField(),
+		zeroField(),
+	        oneField(),
                 zeroField()
             );
         }
@@ -272,7 +277,6 @@
     )
     {
         rhoPhi = alphaPhi*(rho1 - rho2) + phiCN*rho2;
-        //rhoPhi = (alphaPhi*(rho1 - rho2) + phiCN*rho2)*(1-Solidf) + Solidf*phi*(Lf/Mf); //**
     }
     else
     {
@@ -284,7 +288,6 @@
 
         // Calculate the end-of-time-step mass flux
         rhoPhi = alphaPhi*(rho1 - rho2) + phi*rho2;
-        //rhoPhi = (alphaPhi*(rho1 - rho2) + phi*rho2)*(1-Solidf) + Solidf*phi*(Lf/Mf); //**
     }
 
     Info<< "Phase-1 volume fraction = "

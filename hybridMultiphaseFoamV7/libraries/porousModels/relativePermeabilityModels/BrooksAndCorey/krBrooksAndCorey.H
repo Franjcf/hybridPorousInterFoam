@@ -120,8 +120,8 @@ namespace Foam
       void correct()
       {
 	Se_==(Sb_-Smin_)/(Smax_-Smin_);
-	//Se_.max(1e-4);
-        //Se_.min(1-1e-4);		
+	Se_.max(1e-4);
+        Se_.min(1-1e-4);		
 
 
 	kra_ = kramax_* pow((scalar(1)-Se_),n_);
