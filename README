@@ -14,23 +14,24 @@ hybridMultiphaseFoam for OpenFOAM
 * Installation instructions: 
 
 - First, source the OpenFOAM configuration file, i.e. (example for ubuntu version) : 
-   source /opt/openfoam4x/etc/bashrc
+   source /opt/openfoam7x/etc/bashrc
 
-- then in the "porousMultiphaseFoam" directory, run :
+- then in the "hybridMultiphaseFoam" directory, run :
 
 	./Allwmake
 
   to install the package.
 
-- The Dynamic libraries,"lporousInterfaceProperties.so", "libporousModels.so" and 
-  "lporousImmiscibleIncompressibleTwoPhaseMixture.so" are compiled in the standard
-   OpenFOAM user directory : $FOAM_USER_LIBBIN;
+- The Dynamic libraries,"lporousInterfaceProperties.so", "lporousModels.so",
+  "lporousTwoPhaseProperties.so" and "lporousImmiscibleIncompressibleTwoPhaseMixture.so"
+   are compiled in the standard OpenFOAM user directory : $FOAM_USER_LIBBIN;
 
 - The executable solver "hybridMultiphaseFoam" is placed in the standard OpenFOAM user
   directory $FOAM_USER_APPBIN.
 
 - Each tutorial directory contains "run" and "clean" files to test installation
-  and validate the solver.
+  and validate the solver. To run the tutorials more than a single time step just
+  replace "writeNow" with "endTime" in the "system/controlDict" file
 
 - To remove temporary files AND dynamic librairies AND executables, run :
 

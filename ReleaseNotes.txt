@@ -45,14 +45,14 @@ V1.0 (2019-10) ===> First release of the toolbox
      - defenition of two-phase fluid properties that allows for the use of
        porousInterfaceProperties
 
-- capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+- porousModels/capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
      - usual capillary models for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten, Linear)
 
-- phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+- porousModels/phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
      - incompressible phase model for poroous media flows (constant density and viscosity)
 
-- relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+- porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
      - usual relative permeability laws for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten)
