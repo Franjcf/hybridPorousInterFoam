@@ -13,9 +13,8 @@ volScalarField K
     ),
     mesh
 );
-//dimensionedScalar k("k",transportProperties.lookup("k"));
-//volScalarField k0("k0", k*(eps*eps*eps)/(max((1-eps)*(1-eps),SMALL)) ); 
-volScalarField k0("k0", K*(eps*eps*eps)/(max((1-eps)*(1-eps),SMALL)) ); 
+//volScalarField k0("k0", K*(eps*eps*eps)/(max((1-eps)*(1-eps),SMALL)) ); //Kozeny-Carman
+volScalarField k0("k0", K); 
 surfaceScalarField k0f("k0f",fvc::interpolate(k0,"k0"));
 
 autoPtr<relativePermeabilityModel> krModel = relativePermeabilityModel::New("krModel",transportProperties,alpha1);

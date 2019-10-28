@@ -40,10 +40,4 @@ PcCoeff = (
 	+(1./M)*(M1*(1.-alpha1) - M2*(alpha1))*dPcdS
 	);
 
-//PcCoeff2 = (1./Mf) //this is just another way of writing PcCoeff
-//	*(
-//	M1f*(fvc::interpolate(pc)*fvc::snGrad((1-alpha1)) + fvc::interpolate((1-alpha1))*fvc::snGrad(pc) )
-//       -M2f*(fvc::interpolate(pc)*fvc::snGrad(alpha1) + fvc::interpolate(alpha1)*fvc::snGrad(pc)  )
-//	);
-
   

@@ -39,7 +39,7 @@ alpha.wettingmin           alpha.wettingmin [0  0  0 0 0 0 0] 0;
 alpha.wettingmax           alpha.wettingmax [0  0  0 0 0 0 0] 0.999;
 
 relativePermeabilityModel   BrooksAndCorey;
-capillarityModel	BrooksAndCorey;
+capillarityModel	    BrooksAndCorey;
 
 BrooksAndCoreyCoeffs
 {
