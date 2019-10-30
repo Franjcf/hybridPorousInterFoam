@@ -60,15 +60,6 @@ boundary
             (3 7 6 2)
         );
     }
-    
-    //bottom
-    //{
-    //    type patch;
-    //    faces
-    //    (
-    //        (1 5 4 0)
-    //    );
-    //}
 
     leftWall
     {
