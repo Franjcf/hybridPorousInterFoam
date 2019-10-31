@@ -106,8 +106,8 @@ IOdictionary transportProperties
     )
 );
 
-dictionary wetting (transportProperties.subDict("wetting"));
-dictionary nonWetting (transportProperties.subDict("nonWetting"));
+dictionary wetting (transportProperties.subDict(mixture.phase1Name())); 
+dictionary nonWetting (transportProperties.subDict(mixture.phase2Name()));
 
 dimensionedScalar nu1("nu1",wetting.lookup("nu"));
 dimensionedScalar nu2("nu2",nonWetting.lookup("nu"));
