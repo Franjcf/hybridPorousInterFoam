@@ -22,7 +22,7 @@ tutorials = [
 
              # Example Applications
              {'category' : "Example_Applications", 'case' : "Viscous_Fingering_Reservoir/viscous_Fingering"}, \
-            # {'category' : "Example_Applications", 'case' : "Coastal_Barrier/coastalBarrier"}, \
+             {'category' : "Example_Applications", 'case' : "Coastal_Barrier/coastal_Barrier"}, \
              {'category' : "Example_Applications", 'case' : "Fracture/fracture"}, \
              {'category' : "Example_Applications", 'case' : "Drainage_and_Imbibition/imbibition"}, \
              {'category' : "Example_Applications", 'case' : "Drainage_and_Imbibition/drainage"}
