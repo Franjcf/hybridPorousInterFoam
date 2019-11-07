@@ -47,12 +47,12 @@ V1.0 (2019-10) ===> First release of the toolbox
 
 - porousModels/capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
-     - usual capillary models for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten, Linear)
+     - usual capillary models (Brooks and Corey, Van Genuchten, Linear)
 
 - porousModels/phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
-     - incompressible phase model for poroous media flows (constant density and viscosity)
+     - incompressible phase model for porous media flows (constant density and viscosity)
 
 - porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
-     - usual relative permeability laws for impesFoam/anisoImpesFoam (Brooks and Corey, Van Genuchten)
+     - usual relative permeability laws (Brooks and Corey, Van Genuchten)
