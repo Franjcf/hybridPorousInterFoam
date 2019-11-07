@@ -30,7 +30,7 @@ divSchemes
     div(rhoPhiByEps,U)  Gauss linearUpwind grad(U);
     div(phi,alpha)  Gauss vanLeer01;
     div(phirb,alpha) bounded Gauss upwind;
-    div(((rho*nu)*dev2(T(grad(U))))) Gauss linear; 
+    div(((rho*nu)*dev2(T(grad(U))))) Gauss linear;
 }
 
 laplacianSchemes
