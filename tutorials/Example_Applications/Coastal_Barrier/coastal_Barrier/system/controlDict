@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          writeNow; //endTime;
 
-endTime         15;
+endTime         20;
 
 deltaT          1e-5;
 
@@ -51,5 +51,6 @@ maxCo           0.15;
 maxAlphaCo      0.15;
 
 maxDeltaT       1e-1;
+
 
 // ************************************************************************* //

@@ -23,8 +23,8 @@ tutorials = [
              # Example Applications
              {'category' : "Example_Applications", 'case' : "Viscous_Fingering_Reservoir/viscous_Fingering"}, \
              {'category' : "Example_Applications", 'case' : "Coastal_Barrier/coastal_Barrier"}, \
-             {'category' : "Example_Applications", 'case' : "Fracture/fracture_imbibition"}, \
-             {'category' : "Example_Applications", 'case' : "Fracture/fracture_drainage"}, \
+             {'category' : "Example_Applications", 'case' : "Fracture/fracture_Imbibition"}, \
+             {'category' : "Example_Applications", 'case' : "Fracture/fracture_Drainage"}, \
              {'category' : "Example_Applications", 'case' : "Drainage_and_Imbibition/imbibition"}, \
              {'category' : "Example_Applications", 'case' : "Drainage_and_Imbibition/drainage"}
             ]
