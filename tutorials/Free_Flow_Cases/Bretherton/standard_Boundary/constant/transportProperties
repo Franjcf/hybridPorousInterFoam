@@ -20,7 +20,7 @@ phases (wetting nonWetting);
 nonWetting 
 {
     transportModel  Newtonian;
-    nu              [0 2 -1 0 0 0 0] 18e-6;
+    nu              [0 2 -1 0 0 0 0] 1.76e-5;
     rho             [1 -3 0 0 0 0 0] 1;   
 }
 

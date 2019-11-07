@@ -11,46 +11,21 @@ FoamFile
     format      ascii;
     class       dictionary;
     location    "system";
-    object      controlDict;
+    object      setFieldsDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     hybridMultiphaseFoam;
-
-startFrom       latestTime;
-
-startTime       0;
-
-stopAt          writeNow; //endTime;
-
-endTime         200;
-
-deltaT          1e-8;
-
-writeControl    adjustableRunTime;
-
-writeInterval   10e-6;
-
-purgeWrite      0;
-
-writeFormat     ascii;
-
-writePrecision  6;
-
-writeCompression uncompressed;
-
-timeFormat      general;
-
-timePrecision   6;
-
-runTimeModifiable yes;
-
-adjustTimeStep  yes;
-
-maxCo           0.5;
-maxAlphaCo      0.5;
-
-maxDeltaT       1e-1;
+regions
+(
+    boxToCell
+    {
+        box (0 1.85e-4 0) (2e-5 3.4e-4 1);
+        fieldValues
+        (
+            volScalarFieldValue alpha.wetting 1
+        );
+    }
+);
 
 
 // ************************************************************************* //

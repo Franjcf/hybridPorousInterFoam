@@ -17,8 +17,10 @@ FoamFile
 
 convertToMeters 1e-3;
 
+
+
 lx0 0;
-ly0 0.181; 
+ly0 0.181;
 lz0 0;
 
 lx1 1.217;

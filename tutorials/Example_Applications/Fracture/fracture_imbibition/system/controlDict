@@ -9,49 +9,48 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    object      K;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 0 0 0 0 0];
+application     hybridMultiphaseFoam;
 
-internalField   uniform 2.5e-13;
+startFrom       latestTime;
 
-boundaryField
-{
-    leftFace
-    {
-        type            zeroGradient;
-    }
+startTime       0;
 
-    rightFace
-    {
-        type            zeroGradient;
-    }
+stopAt          writeNow; //endTime;
 
-   leftPorous
-    {
-        type            zeroGradient;
-    }
+endTime         5e-3;
 
-    rightPorous
-    {
-        type            zeroGradient;
-    }
+deltaT          1e-9;
 
-    bottom
-    {
-        type            zeroGradient;
-    }
-    top
-    {
-        type            zeroGradient;
-    }
-    frontAndBack
-    {
-        type            empty;
-    }
-}
+writeControl    adjustableRunTime;
+
+writeInterval   25e-6;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable yes;
+
+adjustTimeStep  yes;
+
+maxCo           0.5;
+maxAlphaCo      0.5;
+
+maxDeltaT       1e-1;
+
 
 // ************************************************************************* //

@@ -27,8 +27,8 @@ wetting
 nonWetting 
 {
     transportModel  Newtonian;
-    nu              [0 2 -1 0 0 0 0] 1.45e-5; 
-    rho             [1 -3 0 0 0 0 0] 1.226;
+    nu              [0 2 -1 0 0 0 0] 1.76e-5; 
+    rho             [1 -3 0 0 0 0 0] 1;
 }
 
 sigma            [1 0 -2 0 0 0 0]  0.077;

@@ -22,7 +22,7 @@ ddtSchemes
 
 gradSchemes
 {
-    default        Gauss linear;
+    default        cellMDLimited Gauss linear 1;
 }
 
 divSchemes
@@ -45,7 +45,7 @@ interpolationSchemes
 
 snGradSchemes
 {
-    default         corrected; 
+    default         orthogonal;
 }
 
 

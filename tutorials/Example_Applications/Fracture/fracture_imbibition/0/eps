@@ -29,27 +29,27 @@ boundaryField
 
     leftFace
     {
-        type           zeroGradient;
+        type            zeroGradient;
     }
 
     rightFace
     {
-        type           zeroGradient;
+        type            zeroGradient;
     }
 
     leftPorous
     {
-	type           zeroGradient;
+	type            zeroGradient;
     }
 
     rightPorous
     {
-        type           zeroGradient;
+        type            zeroGradient;
     }
     
     frontAndBack
     {
-        type           empty;
+        type            empty;
     }
 }
 

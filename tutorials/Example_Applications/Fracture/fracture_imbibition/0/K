@@ -9,49 +9,49 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      setFieldsDict;
+    class       volScalarField;
+    object      K;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-defaultFieldValues
-(
-    volScalarFieldValue alpha.wetting 1
-);
+dimensions      [0 2 0 0 0 0 0];
 
-regions
-(
-    boxToCell
+internalField   uniform 1e-13; //2.5e-13;
+
+boundaryField
+{
+    leftFace
     {
-        box (0 1.85e-4 0) (2e-5 3.4e-4 1);
-        fieldValues
-        (
-            volScalarFieldValue alpha.wetting 0
-        );
+        type            zeroGradient;
     }
 
-    boxToCell
+    rightFace
     {
-        box (0 0 0) (1e-5 1 1);
-        fieldValues
-        (
-            volScalarFieldValue eps 0.999
-        );
+        type            zeroGradient;
     }
 
-     boxToCell
+   leftPorous
     {
-        box (0 0 0) (0.5e-5 1 1);
-        fieldValues
-        (
-            volScalarFieldValue alpha.wetting 0
-        );
+        type            zeroGradient;
     }
 
+    rightPorous
+    {
+        type            zeroGradient;
+    }
 
-
-);
-
+    bottom
+    {
+        type            zeroGradient;
+    }
+    top
+    {
+        type            zeroGradient;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+}
 
 // ************************************************************************* //
