@@ -15,14 +15,14 @@ FoamFile
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-convertToMeters 1;
+convertToMeters 1e-3;
 
 lx0 0;
 ly0 0;
 lz0 0;
 
-lx1 0.6;
-ly1 0.24;
+lx1 6;
+ly1 2.4;
 lz1 0.1;
 
 vertices
