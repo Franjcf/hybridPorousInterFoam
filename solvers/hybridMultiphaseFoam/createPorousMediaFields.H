@@ -49,7 +49,7 @@ autoPtr<capillarityModel> myCapModel = capillarityModel::New("pc",transportPrope
 scalar activateCapillarity(transportProperties.lookupOrDefault<scalar>("activateCapillarity",0.));
 myCapModel().correct();
 volScalarField pc("pc",myCapModel().pc()*activateCapillarity);
-volScalarField dPcdS("dPcdS",-myCapModel().dpcdS()*activateCapillarity);
+volScalarField dPcdS("dPcdS",myCapModel().dpcdS()*activateCapillarity);
 volScalarField PcCoeff("PcCoeff", (1./M)*(M1*(1.-alpha1) - M2*alpha1)*dPcdS - pc);
 
 Info<< "Initializing Relative Velocity Field Ur\n" << endl;
