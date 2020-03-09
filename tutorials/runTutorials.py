@@ -47,7 +47,7 @@ class testCase:
         else:
 
             find_str = "FOAM exiting"
-            foamFile = "log."+"hybridMultiphaseFoam"
+            foamFile = "log."+"hybridPorousInterFoam"
             with open(foamFile, "r") as f:
                 f.seek(0, 2)
                 fsize = f.tell()

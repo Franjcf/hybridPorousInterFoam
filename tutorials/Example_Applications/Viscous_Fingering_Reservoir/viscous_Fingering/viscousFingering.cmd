@@ -12,5 +12,5 @@
 # Load openmpi environment
 module load openmpi/gcc
 
-srun hybridMultiphaseFoam -parallel 2>&1 1>log
+srun hybridPorousInterFoam -parallel 2>&1 1>log
 
