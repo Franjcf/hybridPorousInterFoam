@@ -45,9 +45,9 @@ Then, in the "hybridPorousInterFoam" directory, run:
 
   ./Allwmake
 
-The Dynamic libraries "lporousInterfaceProperties.so", "lporousModels.so","lporousTwoPhaseProperties.so" and "lporousImmiscibleIncompressibleTwoPhaseMixture.so" are compiled in the standard OpenFOAM user directory : $FOAM_USER_LIBBIN;
+This compiles the libraries "lporousInterfaceProperties.so", "lporousModels.so","lporousTwoPhaseProperties.so" and "lporousImmiscibleIncompressibleTwoPhaseMixture.so" in the standard OpenFOAM user directory : $FOAM_USER_LIBBIN;
 
-The executable solver "hybridPorousInterFoam" is placed in the standard OpenFOAM user directory $FOAM_USER_APPBIN.
+The executable solver "hybridPorousInterFoam" is also compiled in the standard OpenFOAM user directory $FOAM_USER_APPBIN.
 
 ----------------------------------------------------------------------------
 
@@ -61,21 +61,27 @@ To remove temporary files, dynamic libraries, and executables, run:
 Running the Tutorials
 ################################################################################
 
-To test if the solver was installed correctly you can run all the included tutorial cases for a single time step by typing the following code within the "tutorials" subdirectory:
+To test if the solver was installed correctly, you can run all the included tutorial cases by typing the following code within the "tutorials" subdirectory:
 
 .. code-block:: bash
 
   python runTutorials.py
 
-Note this will take a while. Also make sure to use python2 to run the associated script.  
+Note that this will only run each case for a single time step. Still, it might take a while. Also make sure to use python2 to run the associated script.  
 
 ----------------------------------------------------------------------------
 
-Each tutorial directory contains "run" and "clean" files to test installation and validate the solver. To a particular tutorial for more than a single time step just replace "writeNow" with "endTime" within its "system/controlDict" file. Then you can run said tutorial by typing:
+Each tutorial directory contains "run" and "clean" files to test installation and validate the solver. To run a particular tutorial for more than a single time step just replace "writeNow" with "endTime" within its "system/controlDict" file. Then you can run said tutorial by typing:
 
 .. code-block:: bash
 
   ./run
+
+or equivalently:
+
+.. code-block:: bash
+
+  hybridPorousInterFoam
 
 To clean the directory:
 
@@ -89,17 +95,17 @@ List of Included Cases
 
 Case Template
 
-    - A basic template that includes all the neccesary files to run 
-      a succesfull simulation. Each variable within the "0/" directory and the
-      "constant/transportProperties" file is labeled to make it easier to understand 
+     A basic template that includes all the neccesary files to run 
+     a succesfull simulation. Each variable within the "0/" directory and the
+     "constant/transportProperties" file is labeled to make it easier to understand 
 
 ---------------------------------------------------------------------------- 
 
 Darcy Flow Cases
 
-    - Test cases regarding the verification of the solver in a domain
-      completely occupied by porous media (Buckley-Leverett and
-      determination of a capillarity-gravity equilibirum)
+    - Test cases related to the verification of the solver in a domain
+      completely occupied by porous media (Replicatino of the 1-D Buckley-Leverett
+      analytical solution and determination of a capillarity-gravity equilibirum)
 
 .. figure:: /figures/Darcy.png
     :align: right
@@ -110,8 +116,8 @@ Darcy Flow Cases
 
 Free Flow Cases
 
-     - Test cases regarding the verification of the same solver in a
-       domain where there is no porous media or just a porous media
+     - Test cases related to the verification of the solver in a
+       domain where there is no porous media or just a porous
        boundary (capillary-driven flows, contact angle implementations,
        Bretherton thin film-dynamics)
 
@@ -150,20 +156,20 @@ List of Included Libraries
 
 porousInterfaceProperties
 
-     - addition of a constant contact angle interface condition at the porous media-fluid interface.
+     Implementation of a constant contact angle interface condition at the porous media-fluid interface.
 
 ----------------------------------------------------------------------------
 
 porousImmicscibleIncompressibleTwoPhaseMixture
               
-     - addition of an immicisble incompressible two-phase fluid class that allows for the use of
+     Implementation of an immicisble incompressible two-phase fluid class that allows for the use of
        porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
 porousTwoPhaseProperties
      
-     - defenition of two-phase fluid properties that allows for the use of                                                         porousInterfaceProperties
+     Defenition of two-phase fluid properties that allows for the use of                                                         porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
