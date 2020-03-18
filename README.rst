@@ -102,7 +102,7 @@ Darcy Flow Cases
       determination of a capillarity-gravity equilibirum)
 
 .. figure:: /figures/Darcy.png
-       :align: right
+    :align: right
     :alt: alternate text
     :figclass: align-right
 
@@ -115,8 +115,8 @@ Free Flow Cases
        boundary (capillary-driven flows, contact angle implementations,
        Bretherton thin film-dynamics)
 
-.. figure:: /figures/Freeflow.png
-       :align: right
+.. figure:: /figures/FreeFlow.png
+     :align: right
     :alt: alternate text
     :figclass: align-right
 
@@ -130,7 +130,7 @@ Example Applications
        porous fluid reservoir).
 
 .. figure:: /figures/coastalBarrier.png
-       :align: right
+    :align: right
     :alt: alternate text
     :figclass: align-right
 
