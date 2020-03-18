@@ -9,7 +9,6 @@ support of Ian C. Bourg.
 
 .. figure:: /figures/conceptual.png
     :align: right
-    :width: 50
     :alt: alternate text
     :figclass: align-right
 
@@ -102,6 +101,11 @@ Darcy Flow Cases
       completely occupied by porous media (Buckley-Leverett and
       determination of a capillarity-gravity equilibirum)
 
+.. figure:: /figures/Darcy.png
+       :align: right
+    :alt: alternate text
+    :figclass: align-right
+
 ----------------------------------------------------------------------------
 
 Free Flow Cases
@@ -111,6 +115,11 @@ Free Flow Cases
        boundary (capillary-driven flows, contact angle implementations,
        Bretherton thin film-dynamics)
 
+.. figure:: /figures/Freeflow.png
+       :align: right
+    :alt: alternate text
+    :figclass: align-right
+
 ----------------------------------------------------------------------------
 
 Example Applications
@@ -119,6 +128,11 @@ Example Applications
        simulating systems with a combination of porous and free-fluid
        regions (fractures, coastal barriers, drainage, imbibition,
        porous fluid reservoir).
+
+.. figure:: /figures/coastalBarrier.png
+       :align: right
+    :alt: alternate text
+    :figclass: align-right
 
 ################################################################################
 List of Included Libraries
