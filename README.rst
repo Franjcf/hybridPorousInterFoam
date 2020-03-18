@@ -9,6 +9,7 @@ support of Ian C. Bourg.
 
 .. figure:: /figures/conceptual.png
     :align: right
+    :width: 50
     :alt: alternate text
     :figclass: align-right
 
@@ -159,10 +160,10 @@ porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine
      - usual relative permeability laws (Brooks and Corey, Van Genuchten)
 
 ################################################################################
-Citing the workflow
+Citing the solver
 ################################################################################
 
-If you use our workflow, please cite the following paper (this will be updated once it is accepted):
+If you use this solver, please cite the following paper (this will be updated once it is accepted):
 
 ################################################################################
 Author's Publications
