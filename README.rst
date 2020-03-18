@@ -116,7 +116,7 @@ Free Flow Cases
        Bretherton thin film-dynamics)
 
 .. figure:: /figures/FreeFlow.png
-     :align: right
+    :align: right
     :alt: alternate text
     :figclass: align-right
 
@@ -133,6 +133,12 @@ Example Applications
     :align: right
     :alt: alternate text
     :figclass: align-right
+
+.. figure:: /figures/fracture.png
+    :align: right
+    :alt: alternate text
+    :figclass: align-right
+
 
 ################################################################################
 List of Included Libraries
