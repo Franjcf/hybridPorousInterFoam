@@ -1,5 +1,5 @@
 ================================================================================
-hybridPorousInterFoam Toolbox: Simulation of Multiphase Flow in Hybrid-Scale Porous Media
+Simulation of Multiphase Flow in Hybrid-Scale Porous Media
 ================================================================================
 
 This solver simulates two-phase flow in porous media that contains two characteristic length scales: a large scale solid-free domain where flow is solved through the Volume-Of-Fluid Method, and a small scale porous domain where flow is solved through two-phase Darcy's Law. Both domains are coupled and are solved simultaneously with a single momentum equation and within a single mesh.  
@@ -45,9 +45,11 @@ Then, in the "hybridPorousInterFoam" directory, run:
 
   ./Allwmake
 
-The Dynamic libraries,"lporousInterfaceProperties.so", "lporousModels.so","lporousTwoPhaseProperties.so" and "lporousImmiscibleIncompressibleTwoPhaseMixture.so" are compiled in the standard OpenFOAM user directory : $FOAM_USER_LIBBIN;
+The Dynamic libraries "lporousInterfaceProperties.so", "lporousModels.so","lporousTwoPhaseProperties.so" and "lporousImmiscibleIncompressibleTwoPhaseMixture.so" are compiled in the standard OpenFOAM user directory : $FOAM_USER_LIBBIN;
 
-The executable solver "hybridMultiphaseFoam" is placed in the standard OpenFOAM user directory $FOAM_USER_APPBIN.
+The executable solver "hybridPorousInterFoam" is placed in the standard OpenFOAM user directory $FOAM_USER_APPBIN.
+
+----------------------------------------------------------------------------
 
 To remove temporary files, dynamic libraries, and executables, run:
 
@@ -59,7 +61,7 @@ To remove temporary files, dynamic libraries, and executables, run:
 Running the Tutorials
 ################################################################################
 
-To test if the solver was installed correctly you can run all the included tutorial cases for a single time step by typing the follownig within the "tutorials" subdirectory:
+To test if the solver was installed correctly you can run all the included tutorial cases for a single time step by typing the following code within the "tutorials" subdirectory:
 
 .. code-block:: bash
 
@@ -75,7 +77,7 @@ Each tutorial directory contains "run" and "clean" files to test installation an
 
   ./run
 
-To clean the directory type:
+To clean the directory:
 
 .. code-block:: bash
 
@@ -127,7 +129,8 @@ porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
-porousImmicscibleIncompressibleTwoPhaseMixture              
+porousImmicscibleIncompressibleTwoPhaseMixture
+              
      - addition of an immicisble incompressible two-phase fluid class that allows for the use of
        porousInterfaceProperties
 
@@ -157,7 +160,7 @@ porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine
 Citing the workflow
 ################################################################################
 
-If you use our workflow, please cite the following paper (this will be updated once accepted):
+If you use our workflow, please cite the following paper (this will be updated once it is accepted):
 
 ################################################################################
 Author's Publications
