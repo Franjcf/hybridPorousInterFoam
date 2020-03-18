@@ -95,17 +95,13 @@ List of Included Cases
 
 Case Template
 
-     A basic template that includes all the neccesary files to run 
-     a succesfull simulation. Each variable within the "0/" directory and the
-     "constant/transportProperties" file is labeled to make it easier to understand 
+- A basic template that includes all the neccesary files to run a succesfull simulation. Each variable within the "0/" directory and the "constant/transportProperties" file is labeled to make it easier to understand 
 
 ---------------------------------------------------------------------------- 
 
 Darcy Flow Cases
 
-    - Test cases related to the verification of the solver in a domain
-      completely occupied by porous media (Replicatino of the 1-D Buckley-Leverett
-      analytical solution and determination of a capillarity-gravity equilibirum)
+- Test cases related to the verification of the solver in a domain completely occupied by porous media (Replicatino of the 1-D Buckley-Leverett analytical solution and determination of a capillarity-gravity equilibirum)
 
 .. figure:: /figures/Darcy.png
     :align: right
@@ -116,10 +112,7 @@ Darcy Flow Cases
 
 Free Flow Cases
 
-     - Test cases related to the verification of the solver in a
-       domain where there is no porous media or just a porous
-       boundary (capillary-driven flows, contact angle implementations,
-       Bretherton thin film-dynamics)
+- Test cases related to the verification of the solver in a domain where there is no porous media or just a porous boundary (capillary-driven flows, contact angle implementations, Bretherton thin film-dynamics)
 
 .. figure:: /figures/FreeFlow.png
     :align: right
@@ -130,10 +123,7 @@ Free Flow Cases
 
 Example Applications
 
-     - Sample cases that show the multi-scale nature of this solver by
-       simulating systems with a combination of porous and free-fluid
-       regions (fractures, coastal barriers, drainage, imbibition,
-       porous fluid reservoir).
+- Sample cases that show the multi-scale nature of this solver by simulating systems with a combination of porous and free-fluid regions (fractures, coastal barriers, drainage, imbibition, porous fluid reservoir).
 
 .. figure:: /figures/coastalBarrier.png
     :align: right
@@ -156,38 +146,37 @@ List of Included Libraries
 
 porousInterfaceProperties
 
-     Implementation of a constant contact angle interface condition at the porous media-fluid interface.
+- Implementation of a constant contact angle interface condition at the porous media-fluid interface.
 
 ----------------------------------------------------------------------------
 
 porousImmicscibleIncompressibleTwoPhaseMixture
               
-     Implementation of an immicisble incompressible two-phase fluid class that allows for the use of
-       porousInterfaceProperties
+- Implementation of an immicisble incompressible two-phase fluid class that allows for the use of porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
-porousTwoPhaseProperties
+porousTwoPhaseProperties:
      
-     Defenition of two-phase fluid properties that allows for the use of                                                         porousInterfaceProperties
+- Defenition of two-phase fluid properties that allows for the use of porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
 porousModels/capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
 
-     - usual capillary models (Brooks and Corey, Van Genuchten, Linear)
+- Capillary pressure models (Brooks and Corey, Van Genuchten, Linear)
 
 ----------------------------------------------------------------------------
 
 porousModels/phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) ) 
 
-     - incompressible phase model for porous media flows (constant density and viscosity)
+- Incompressible phase model for porous media flows (constant density and viscosity)
 
 ----------------------------------------------------------------------------
 
 porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
      
-     - usual relative permeability laws (Brooks and Corey, Van Genuchten)
+- Relative permeability models (Brooks and Corey, Van Genuchten)
 
 ################################################################################
 Citing the solver
