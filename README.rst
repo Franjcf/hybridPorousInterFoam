@@ -185,7 +185,7 @@ Citing the solver
 If you use this solver, please cite the following paper (this will be updated once it is accepted):
 
 ################################################################################
-Author's Publications
+Authors' Publications
 ################################################################################
 1. Carrillo, F. J., Bourg, I. C., 2019. A darcy-brinkman-biot approach to modeling the hydrology and mechanics of porous media containing758 macropores and deformable microporous regions. Water Resources Research 55, 8096–8121
 
@@ -195,8 +195,7 @@ Author's Publications
 
 4. Soulaine, C., Roman, S., Kovscek, A., Tchelepi, H. A., 2018. Pore-scale modelling of multiphase reactive ﬂow. Application to mineral923 dissolution with production of CO2. Journal of Fluid Mechanics 855, 616–645.924 Soulaine, C., Tchelepi, H.A., 2016.Micro-continuumapproachforpore-scalesimulationofsubsurface processes.TransportIn PorousMedia925 113, 431–456
 
-5. Soulaine, C., Creux, P., Tchelepi, H. A., 2019. Micro-continuum framework for pore-scale multiphase ﬂuid transport in shale formations.916 31
-Transport in Porous Media.
+5. Soulaine, C., Creux, P., Tchelepi, H. A., 2019. Micro-continuum framework for pore-scale multiphase ﬂuid transport in shale formations.916 31 Transport in Porous Media.
 
 6. Horgue, P., Soulaine, C., Franc, J., Guibert, R., Debenest, G., 2015. An open-source toolbox for multiphase ﬂow in porous media. Computer810 Physics Communications 187 (0), 217– 226
 
