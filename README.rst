@@ -148,13 +148,15 @@ porousModels/capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015
 
 ----------------------------------------------------------------------------
 
-porousModels/phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) )                                             
+porousModels/phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) ) 
+
      - incompressible phase model for porous media flows (constant density and viscosity)
 
 ----------------------------------------------------------------------------
 
-porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )                              
-    - usual relative permeability laws (Brooks and Corey, Van Genuchten)
+porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+     
+     - usual relative permeability laws (Brooks and Corey, Van Genuchten)
 
 ################################################################################
 Citing the workflow

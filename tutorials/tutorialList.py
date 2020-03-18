@@ -2,6 +2,9 @@
 # adapted from impesFOAM source code in Hourge P. et al (2014))
 
 tutorials = [
+             # Case Template 
+             {'category' : "Case_Template", 'case' : "template"}, \
+
 	     # Darcy Flow Validation
              {'category' : "Darcy_Flow_Cases", 'case' : "Buckley-Leverett/flow_Driven_BrooksCorey"}, \
              {'category' : "Darcy_Flow_Cases", 'case' : "Buckley-Leverett/gravity_Driven_BrooksCorey"}, \
