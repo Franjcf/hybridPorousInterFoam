@@ -90,8 +90,8 @@ List of Included Cases
 Case Template
 
     - A basic template that includes all the neccesary files to run 
-      a succesfull simulation. We labeled each parameter within the
-      "constant/transportProperties" file to make it easier to understand 
+      a succesfull simulation. Each variable within the "0/" directory and the
+      "constant/transportProperties" file is labeled to make it easier to understand 
 
 ---------------------------------------------------------------------------- 
 
@@ -139,6 +139,10 @@ Example Applications
     :alt: alternate text
     :figclass: align-right
 
+.. figure:: /figures/viscousFingering.png
+    :align: right
+    :alt: alternate text
+    :figclass: align-right
 
 ################################################################################
 List of Included Libraries
