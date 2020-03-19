@@ -7,11 +7,13 @@ This solver simulates two-phase flow in porous media that contains two character
 This repository was created by Francisco J. Carrillo and Cyprien Soulaine with the
 support of Ian C. Bourg. 
 
+**Conceptual Representation of the Modeling Framework:**
+
 .. figure:: /figures/conceptual.png
     :align: right
     :alt: alternate text
     :figclass: align-right
-    Conceptual Representation of the Modeling Framework.
+    
 
 ----------------------------------------------------------------------------
 
@@ -124,18 +126,18 @@ List of Included Cases
 - Sample cases that show the multi-scale nature of this solver by simulating systems with a combination of porous and free-fluid regions (fractures, coastal barriers, drainage, imbibition, porous fluid reservoir).
 
 
-**Wave Propagation in Coastal Barriers**
+**Wave Propagation in Coastal Barriers:**
 
 .. figure:: /figures/coastalBarrier.png
 
 |
 |
-**Drainage and Imbibition in Porous Fractures**
+**Drainage and Imbibition in Porous Fractures:**
 
 .. figure:: /figures/fracture.png
 |
 |
-**Viscous Fingering in Oil Reservoirs**
+**Viscous Fingering in Oil Reservoirs:**
 
 .. figure:: /figures/viscousFingering.png
    
