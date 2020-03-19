@@ -182,7 +182,11 @@ porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine
 Citing the solver
 ################################################################################
 
-If you use this solver, please cite the following paper (this will be updated once it is accepted):
+If you use this solver, please cite the following paper (this will be updated once the publication is accepted):
+
+Carrillo, F. J., Bourg, I. C., Soulaine, C., 2020, Multiphase Flow Modelling in Multiscale Porous Media: An Open-Sourced Micro-Continuum Approach, arXiv:2003.08374
+
+https://arxiv.org/abs/2003.08374
 
 ################################################################################
 Authors' Publications
