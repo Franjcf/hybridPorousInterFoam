@@ -11,13 +11,11 @@ support of Ian C. Bourg.
     :align: right
     :alt: alternate text
     :figclass: align-right
-
     Conceptual Representation of the Modeling Framework.
 
 ----------------------------------------------------------------------------
 
 .. contents::
-
 
 ################################################################################
 General Information
@@ -93,13 +91,13 @@ To clean the directory:
 List of Included Cases
 ################################################################################
 
-Case Template
+**Case Template**
 
 - A basic template that includes all the neccesary files to run a succesfull simulation. Each variable within the "0/" directory and the "constant/transportProperties" file is labeled to make it easier to understand 
 
 ---------------------------------------------------------------------------- 
 
-Darcy Flow Cases
+**Darcy Flow Cases**
 
 - Test cases related to the verification of the solver in a domain completely occupied by porous media (Replicatino of the 1-D Buckley-Leverett analytical solution and determination of a capillarity-gravity equilibirum)
 
@@ -110,7 +108,7 @@ Darcy Flow Cases
 
 ----------------------------------------------------------------------------
 
-Free Flow Cases
+**Free Flow Cases**
 
 - Test cases related to the verification of the solver in a domain where there is no porous media or just a porous boundary (capillary-driven flows, contact angle implementations, Bretherton thin film-dynamics)
 
@@ -121,65 +119,66 @@ Free Flow Cases
 
 ----------------------------------------------------------------------------
 
-Example Applications
+**Example Applications**
 
 - Sample cases that show the multi-scale nature of this solver by simulating systems with a combination of porous and free-fluid regions (fractures, coastal barriers, drainage, imbibition, porous fluid reservoir).
+
 
 .. figure:: /figures/coastalBarrier.png
     :align: right
     :alt: alternate text
     :figclass: align-right
-
+    
 .. figure:: /figures/fracture.png
     :align: right
     :alt: alternate text
     :figclass: align-right
-
+    
 .. figure:: /figures/viscousFingering.png
     :align: right
     :alt: alternate text
     :figclass: align-right
-
+    
 ################################################################################
 List of Included Libraries
 ################################################################################
 
-porousInterfaceProperties
+**porousInterfaceProperties**
 
 - Implementation of a constant contact angle interface condition at the porous media-fluid interface.
 
 ----------------------------------------------------------------------------
 
-porousImmicscibleIncompressibleTwoPhaseMixture
+**porousImmicscibleIncompressibleTwoPhaseMixture**
               
 - Implementation of an immicisble incompressible two-phase fluid class that allows for the use of porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
-porousTwoPhaseProperties:
+**porousTwoPhaseProperties:**
      
 - Defenition of two-phase fluid properties that allows for the use of porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
-porousModels/capillarityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+**porousModels/capillarityModels** ( adapted from from Horgue P. & Soulaine C. (2015) )
 
 - Capillary pressure models (Brooks and Corey, Van Genuchten, Linear)
 
 ----------------------------------------------------------------------------
 
-porousModels/phaseModels ( adapted from from Horgue P. & Soulaine C. (2015) ) 
+**porousModels/phaseModels** ( adapted from from Horgue P. & Soulaine C. (2015) ) 
 
 - Incompressible phase model for porous media flows (constant density and viscosity)
 
 ----------------------------------------------------------------------------
 
-porousModels/relativePermeabilityModels ( adapted from from Horgue P. & Soulaine C. (2015) )
+**porousModels/relativePermeabilityModels** ( adapted from from Horgue P. & Soulaine C. (2015) )
      
 - Relative permeability models (Brooks and Corey, Van Genuchten)
 
 ################################################################################
-Citing the solver
+Citing the Toolbox
 ################################################################################
 
 If you use this solver, please cite the following paper (this will be updated once the publication is accepted):
