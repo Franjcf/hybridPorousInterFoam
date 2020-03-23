@@ -1,5 +1,4 @@
-// Defining Permeability Models
-
+//Permeability Models
 Info<< "Reading intrinsic permeability field field K\n" << endl;
 volScalarField K
 (
@@ -13,7 +12,7 @@ volScalarField K
     ),
     mesh
 );
-//volScalarField k0("k0", K*(eps*eps*eps)/(max((1-eps)*(1-eps),SMALL)) ); //Kozeny-Carman
+//volScalarField k0("k0", K*(eps*eps*eps)/(max((1-eps)*(1-eps),SMALL)) ); Uncomment for Kozeny-Carman
 volScalarField k0("k0", K); 
 surfaceScalarField k0f("k0f",fvc::interpolate(k0,"k0"));
 
@@ -67,7 +66,7 @@ volVectorField Ur
 );
 
 
-// Labeling the places that have porous media
+//Labeling the places that have porous media
 forAll(eps,celli) 
 {
 	if(eps[celli]>0.99) 
@@ -93,7 +92,7 @@ forAll(mesh.boundary(), patchi)
 
 surfaceScalarField Solidf(fvc::interpolate(Solid));
 
-// Eliminating intermediate values of Solid Indicator Function
+//Eliminating intermediate values of Solid Indicator Function
 forAll(Solidf,facei)
 {
 	if(Solidf[facei]<1) // if <1 ==0.  

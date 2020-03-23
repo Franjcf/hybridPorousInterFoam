@@ -24,7 +24,7 @@ wetting //wetting phase properties
     rho             [1 -3 0 0 0 0 0] 1000; //density of this fluid
 }
 
-nonWetting 
+nonWetting //non-wetting phase properties
 {
     transportModel  Newtonian; //viscocity model for this fluid
     nu              [0 2 -1 0 0 0 0] 1.76e-5; //dynamic viscocity for this fluid
@@ -60,10 +60,17 @@ capillarityModel           VanGenuchten;
 //Choose model parameters
 VanGenuchtenCoeffs
 {
+    //irriducible wetting fluid saturation for pc model
     alpha.wettingminpc alpha.wettingminpc [0 0 0 0 0 0 0] 0; 
+
+    //max. wetting fluid saturation for pc model
     alpha.wettingmaxpc alpha.wettingmaxpc [0 0 0 0 0 0 0] 0.999;
-    pc0 pc0 [1 -1 -2 0 0 0 0] 100; //entry capillary pressure 
-    m 3; //non dimensional coefficient
+
+    //entry cappilary pressure   
+    pc0 pc0 [1 -1 -2 0 0 0 0] 100;
+
+    //non-dimensional coefficient
+    m 3; 
 }
 
 // ************************************************************************* //

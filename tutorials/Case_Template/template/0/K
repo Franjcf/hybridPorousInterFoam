@@ -17,7 +17,7 @@ FoamFile
 
 dimensions      [0 2 0 0 0 0 0];
 
-internalField   uniform 1e-20; //Permeability value in m^2 (k_0 in paper)
+internalField   uniform 1e-20; //Permeability value in m^2 (k_0 in ref. paper)
 
 boundaryField
 {

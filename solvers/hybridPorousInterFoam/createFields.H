@@ -54,7 +54,7 @@ volVectorField U
     UnonWetting + Uwetting
 );
 
-Info<< "Reading field fluid fraction field eps\n" << endl;
+Info<< "Reading fluid fraction field eps\n" << endl;
 volScalarField eps
 (
     IOobject
@@ -141,7 +141,7 @@ surfaceScalarField rhoPhi
     fvc::interpolate(rho)*phi
 );
 
-Info<< "Calculating superficial mass flux\n" << endl;
+Info<< "Calculating averaged mass flux\n" << endl;
 surfaceScalarField rhoPhiByEps
 (
 	IOobject
@@ -154,12 +154,6 @@ surfaceScalarField rhoPhiByEps
     ),
     rhoPhi*linearInterpolate(1/(eps+SMALL))
 );
-
-// Construct incompressible turbulence model
-//autoPtr<incompressible::turbulenceModel> turbulence
-//(
-//    incompressible::turbulenceModel::New(U, phi, mixture)
-//);
 
 #include "readGravitationalAcceleration.H"
 #include "readhRef.H"

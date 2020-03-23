@@ -22,18 +22,19 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    interFoam
+    hybridPorousInterFoam
 
 Description
-    Solver for 2 incompressible, isothermal immiscible fluids using a VOF
-    (volume of fluid) phase-fraction based interface capturing approach.
+    Solver for two-phase flow in hybrid-sclae porous media containing porous 
+    and solid-free regions. 
+    
+    In porous regions fluid flow is governed by two-phase Darcy's law
+     
+    In solid-free regions flow is modeled through the volume of fluid
+    phase-fraction based interface capturing approach.
 
     The momentum and other fluid properties are of the "mixture" and a single
     momentum equation is solved.
-
-    Turbulence modelling is generic, i.e. laminar, RAS or LES may be selected.
-
-    For a two-fluid approach see twoPhaseEulerFoam.
 
 \*---------------------------------------------------------------------------*/
 
@@ -64,8 +65,6 @@ int main(int argc, char *argv[])
     #include "createRDeltaT.H"
     #include "initContinuityErrs.H"
     #include "createFields.H"
-	
-    //turbulence->validate();
 
     if (!LTS)
     {
@@ -114,11 +113,6 @@ int main(int argc, char *argv[])
             {
                 #include "pEqn.H"
             }
-
- //           if (pimple.turbCorr())
- //           {
- //               turbulence->correct();
- //           }
         }
 
         runTime.write();

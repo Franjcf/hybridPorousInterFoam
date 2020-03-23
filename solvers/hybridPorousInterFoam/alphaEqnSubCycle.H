@@ -38,7 +38,8 @@ else
     #include "alphaEqn.H"
 }
 
-////Here we update the density of the fluid and the volume averaged explicit convection term 
+////Here we update the density of the fluid
+//and the volume averaged explicit convection term 
 rho = (alpha1*rho1 + alpha2*rho2)*(1.-Solid) + Solid*L/M; 
 rhoPhiByEps=fvc::interpolate(1./eps)*rhoPhi;
 		

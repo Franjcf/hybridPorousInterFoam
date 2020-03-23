@@ -3,9 +3,9 @@
  OpenFOAM(R) is Copyright (C) 2011-2019 OpenFOAM Foundation
  Contact: OpenFOAM Foundation (OpenFOAM.Foundation@gmail.com)
 
- You may use, distribute and copy the OpenFOAM CFD Toolbox under the terms
- of GNU General Public License version 3, which is displayed below, or
- (at your option) any later version.
+ You may use, distribute and copy the OpenFOAM hybridPorousInterFoam
+ Toolbox under the terms of GNU General Public License version 3, which
+ is displayed below, or (at your option) any later version.
 
 -------------------------------------------------------------------------
 

@@ -38,6 +38,4 @@ dPcdS = myCapModel().dpcdS()*activateCapillarity;
 PcCoeff = (  
 	-pc
 	+(1./M)*(M1*(1.-alpha1) - M2*(alpha1))*dPcdS
-	);
-
-  
+	);  
