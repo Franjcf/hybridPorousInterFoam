@@ -192,7 +192,7 @@ Carrillo, F. J., Bourg, I. C., Soulaine, C., 2020, Multiphase Flow Modelling in 
 https://arxiv.org/abs/2003.08374
 
 **Code:** 
-https://doi.org/10.5281/zenodo.3724707
+https://doi.org/10.5281/zenodo.3724707 (DOI: 10.5281/zenodo.3724707)
 
 
 ################################################################################
