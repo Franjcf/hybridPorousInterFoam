@@ -184,11 +184,16 @@ List of Included Libraries
 Citing the Toolbox
 ################################################################################
 
-If you use this solver, please cite the following paper (this will be updated once the publication is accepted):
+If you use this solver, please cite the following paper (theory) and the code (implementation):
 
+**Paper:**
 Carrillo, F. J., Bourg, I. C., Soulaine, C., 2020, Multiphase Flow Modelling in Multiscale Porous Media: An Open-Sourced Micro-Continuum Approach, arXiv:2003.08374
 
 https://arxiv.org/abs/2003.08374
+
+**Code:** 
+https://doi.org/10.5281/zenodo.3724707
+
 
 ################################################################################
 Authors' Publications
