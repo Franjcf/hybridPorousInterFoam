@@ -95,7 +95,7 @@ List of Included Cases
 
 **Case Template**
 
-- A basic template that includes all the neccesary files to run a succesfull simulation. Each variable and parameter within the "0/" directory and the "constant/transportProperties" file is labeled and explanied.
+- A basic template that includes all the neccesary files to run a succesfull simulation. Each variable and parameter within the "0/" directory and the "constant/transportProperties" file is labeled and explained.
 
 ---------------------------------------------------------------------------- 
 

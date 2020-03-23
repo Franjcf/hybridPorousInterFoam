@@ -20,8 +20,6 @@ tutorials = [
              {'category' : "Free_Flow_Cases", 'case' : "Capillary_Rise/standard_Boundary"}, \
              {'category' : "Free_Flow_Cases", 'case' : "Flat_Plate_Contact_Angle/porous_Boundary"}, \
              {'category' : "Free_Flow_Cases", 'case' : "Flat_Plate_Contact_Angle/standard_Boundary"}, \
-             {'category' : "Free_Flow_Cases", 'case' : "Hele-Shaw_Capillary_Flow/porous_Boundary"}, \
-             {'category' : "Free_Flow_Cases", 'case' : "Hele-Shaw_Capillary_Flow/standard_Boundary"}, \
 
              # Example Applications
              {'category' : "Example_Applications", 'case' : "Viscous_Fingering_Reservoir/viscous_Fingering"}, \
