@@ -164,21 +164,25 @@ List of Included Libraries
 
 ----------------------------------------------------------------------------
 
-**porousModels/capillarityModels** ( adapted from from Horgue P. & Soulaine C. (2015) )
-
-- Capillary pressure models (Brooks and Corey, Van Genuchten, Linear)
-
-----------------------------------------------------------------------------
-
-**porousModels/phaseModels** ( adapted from from Horgue P. & Soulaine C. (2015) ) 
+**porousModels/phaseModels** ( *adapted* ) 
 
 - Incompressible phase model for porous media flows (constant density and viscosity)
 
 ----------------------------------------------------------------------------
 
-**porousModels/relativePermeabilityModels** ( adapted from from Horgue P. & Soulaine C. (2015) )
+**porousModels/capillarityModels** ( *adapted* )
+
+- Capillary pressure models (Brooks and Corey, Van Genuchten, Linear)
+
+----------------------------------------------------------------------------
+
+**porousModels/relativePermeabilityModels** ( *adapted*  )
      
 - Relative permeability models (Brooks and Corey, Van Genuchten)
+
+**Note on adapted libraries**
+
+- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code first published in Horgue P. et al. (2015). Said code is exclusivly used to efficiently model Darcy-scale flows and can be found here: https://github.com/phorgue/porousMultiphaseFoam
 
 ################################################################################
 Citing the Toolbox
@@ -208,5 +212,5 @@ Authors' Publications
 
 5. Soulaine, C., Creux, P., Tchelepi, H. A., 2019. Micro-continuum framework for pore-scale multiphase ﬂuid transport in shale formations.916 31 Transport in Porous Media.
 
-6. Horgue, P., Soulaine, C., Franc, J., Guibert, R., Debenest, G., 2015. An open-source toolbox for multiphase ﬂow in porous media. Computer810 Physics Communications 187 (0), 217– 226
+6. Horgue, P., Soulaine, C., Franc, J., Guibert, R., Debenest, G., 2015. An open-source toolbox for multiphase ﬂow in porous media. Computer Physics Communications 187 (0), 217– 226
 
