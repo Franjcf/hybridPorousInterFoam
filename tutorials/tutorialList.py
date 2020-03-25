@@ -1,5 +1,5 @@
 # tutorials list for python validation script
-# adapted from impesFOAM source code in Hourge P. et al (2014))
+# adapted from porousMultiphaseFoam source code, Horgue P. et al. (2014)
 
 tutorials = [
              # Case Template 

@@ -182,7 +182,7 @@ List of Included Libraries
 
 **Note on adapted libraries**
 
-- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code first published in Horgue P. et al. (2015). Said code is exclusivly used to efficiently model Darcy-scale flows and can be found here: https://github.com/phorgue/porousMultiphaseFoam
+- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code published in Horgue P. et al. (2015). Said code is exclusivly used to efficiently model Darcy-scale flows and can be found here: https://github.com/phorgue/porousMultiphaseFoam
 
 ################################################################################
 Citing the Toolbox
