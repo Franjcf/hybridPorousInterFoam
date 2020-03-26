@@ -180,7 +180,9 @@ List of Included Libraries
      
 - Relative permeability models (Brooks and Corey, Van Genuchten)
 
-**Note on adapted libraries**
+----------------------------------------------------------------------------
+
+**Note on Adapted Libraries**
 
 - The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code published in Horgue P. et al. (2015). Said code can be used to efficiently model full Darcy-scale flows. 
 
