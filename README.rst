@@ -182,7 +182,7 @@ List of Included Libraries
 
 **Note on adapted libraries**
 
-- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code published in Horgue P. et al. (2015). Said code is exclusivly used to efficiently model Darcy-scale flows and can be found here: https://github.com/phorgue/porousMultiphaseFoam
+- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code published in Horgue P. et al. (2015). Said code can be used to efficiently model full Darcy-scale flows. 
 
 ################################################################################
 Citing the Toolbox
@@ -214,3 +214,4 @@ Authors' Publications
 
 6. Horgue, P., Soulaine, C., Franc, J., Guibert, R., Debenest, G., 2015. An open-source toolbox for multiphase ﬂow in porous media. Computer Physics Communications 187 (0), 217– 226
 
+7. The referenced Darcy-Scale toolbox can be found here: https://github.com/phorgue/porousMultiphaseFoam
