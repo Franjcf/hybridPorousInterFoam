@@ -4,6 +4,8 @@ Simulation of Multiphase Flow in Hybrid-Scale Porous Media
 
 This solver simulates two-phase flow in porous media that contains two characteristic length scales: a large scale solid-free domain where flow is solved through the Volume-Of-Fluid Method, and a small scale porous domain where flow is solved through two-phase Darcy's Law. Both domains are coupled and are solved simultaneously with a single momentum equation and within a single mesh.  
 
+The most recent version also includes a simplified solver that can be used to model single-phase flow in hybrid scale porous media. 
+
 This repository was created by Francisco J. Carrillo and Cyprien Soulaine with the
 support of Ian C. Bourg. 
 
@@ -47,7 +49,7 @@ Then, in the "hybridPorousInterFoam" directory, run:
 
 This compiles the libraries "lporousInterfaceProperties.so", "lporousModels.so","lporousTwoPhaseProperties.so" and "lporousImmiscibleIncompressibleTwoPhaseMixture.so" in the standard OpenFOAM user directory : $FOAM_USER_LIBBIN;
 
-The executable solver "hybridPorousInterFoam" is also compiled in the standard OpenFOAM user directory $FOAM_USER_APPBIN.
+The executable solvers "hybridPorousInterFoam" (for multiphase flow) and "hybridPorousPimpleFoam" (for single-phase flow) are also compiled in the standard OpenFOAM user directory $FOAM_USER_APPBIN.
 
 ----------------------------------------------------------------------------
 
@@ -81,7 +83,8 @@ or equivalently:
 
 .. code-block:: bash
 
-  hybridPorousInterFoam
+  hybridPorousInterFoam (for multiphase flow cases)
+  hybridPorousPimpleFoam (for single-phase flow cases)
 
 To clean the directory:
 
@@ -123,7 +126,7 @@ List of Included Cases
 
 **Example Applications**
 
-- Sample cases that show the multi-scale nature of this solver by simulating systems with a combination of porous and free-fluid regions (fractures, coastal barriers, drainage, imbibition, porous fluid reservoir).
+- Sample cases that show the multi-scale nature of this solver by simulating multiphase systems with a combination of porous and free-fluid regions (i.e. fractures, coastal barriers, drainage, imbibition, and a porous reservoirs). Some of these contain additional single-phase cases for use with the single-phase solver.
 
 
 **Wave Propagation in Coastal Barriers:**
