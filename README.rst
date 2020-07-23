@@ -1,5 +1,5 @@
 ================================================================================
-Simulation of Single- and Multi-Phase Flow in Hybrid-Scale Porous Media
+Simulation of Multiphase Flow in Hybrid-Scale Porous Media
 ================================================================================
 
 This solver simulates single- and two-phase flow in porous media that contains two characteristic length scales: a large scale solid-free domain where flow is solved through the Volume-Of-Fluid Method, and a small scale porous domain where flow is solved through two-phase Darcy's Law. Both domains are coupled and are solved simultaneously with a single momentum equation and within a single mesh.  
