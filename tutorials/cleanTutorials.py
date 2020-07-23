@@ -8,7 +8,7 @@ from __future__ import with_statement
 import os, subprocess, sys
 
 # import list_cases
-from tutorialList import tutorials as testCases
+from tutorial_list import tutorials as testCases
 
 class testCase:
 

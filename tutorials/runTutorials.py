@@ -8,7 +8,7 @@ from __future__ import with_statement
 import os, subprocess, sys
 
 # import list_cases
-from tutorialList import tutorials as testCases
+from tutorial_list import tutorials as testCases
 
 class testCase:
 
@@ -16,8 +16,9 @@ class testCase:
     #=============================================================================
     # ROUTINE run
     #=============================================================================
-    def __init__(self, category, case):
+    def __init__(self, solver, category, case):
 
+        self.solver = solver
         self.category = category
         self.case = case
         self.testDir = category+"/"+case
@@ -28,7 +29,7 @@ class testCase:
     def run(self):
 
         print ""
-        print "Test : " + self.category + " " + self.case
+        print "Test : " + self.solver + " "  + self.category + " " + self.case
         print ""
 
         refDir=os.getcwd()
@@ -47,7 +48,7 @@ class testCase:
         else:
 
             find_str = "FOAM exiting"
-            foamFile = "log."+"hybridPorousInterFoam"
+            foamFile = "log."+ self.solver
             with open(foamFile, "r") as f:
                 f.seek(0, 2)
                 fsize = f.tell()
@@ -81,7 +82,7 @@ if __name__ == '__main__':
     print "========================================================"
 
     for case in testCases:
-        test = testCase(case["category"],case["case"])
+        test = testCase(case["solver"],case["category"],case["case"])
         test.run()
 
     print " "
