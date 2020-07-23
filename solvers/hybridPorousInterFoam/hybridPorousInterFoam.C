@@ -25,7 +25,7 @@ Application
     hybridPorousInterFoam
 
 Description
-    Solver for two-phase flow in hybrid-sclae porous media containing porous 
+    Solver for two-phase flow in hybrid-scale porous media containing porous 
     and solid-free regions. 
     
     In porous regions fluid flow is governed by two-phase Darcy's law

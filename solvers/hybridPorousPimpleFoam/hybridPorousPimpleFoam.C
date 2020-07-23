@@ -22,19 +22,15 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    hybridPorousInterFoam
+    hybridPorousPimpleFoam
 
 Description
-    Solver for two-phase flow in hybrid-sclae porous media containing porous 
+    Solver for single-phase flow in hybrid-scale porous media containing porous 
     and solid-free regions. 
     
-    In porous regions fluid flow is governed by two-phase Darcy's law
+    In porous regions fluid flow is governed by Darcy's law
      
-    In solid-free regions flow is modeled through the volume of fluid
-    phase-fraction based interface capturing approach.
-
-    The momentum and other fluid properties are of the "mixture" and a single
-    momentum equation is solved.
+    In solid-free regions flow is modeled through the Navier-Stokes Equations.
 
 \*---------------------------------------------------------------------------*/
 
