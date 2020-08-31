@@ -1,0 +1,76 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+phases (wetting nonWetting); //choose the name of your two fluids
+
+wetting //wetting phase properties 
+{
+    transportModel  Newtonian; //viscosity model for this fluid
+    nu              [0 2 -1 0 0 0 0] 1e-6; //dynamic viscocity of this fluid
+    rho             [1 -3 0 0 0 0 0] 1000; //density of this fluid
+}
+
+nonWetting //non-wetting phase properties
+{
+    transportModel  Newtonian; //viscocity model for this fluid
+    nu              [0 2 -1 0 0 0 0] 1.76e-5; //dynamic viscocity for this fluid
+    rho             [1 -3 0 0 0 0 0] 1; //density of this fluid
+}
+
+sigma            [1 0 -2 0 0 0 0]  0.077; //surface tension 
+
+//Turn porous capillarity effects on (1) or off (0)  
+activateCapillarity            0;  
+
+//Turn contact angle at porous interface on (1) or off (0)  
+activatePorousContactAngle     1; 
+
+//Smoothing cycles for alpha1 field   
+SmoothingCycles		       1;
+
+//Contact angle at porous interface
+theta0 			     150;
+
+//Irreducible wetting fluid saturation in porous media
+alpha.wettingmin           alpha.wettingmin [0  0  0 0 0 0 0] 0;
+
+//Maximum wetting fluid saturation in porous media
+alpha.wettingmax           alpha.wettingmax [0  0  0 0 0 0 0] 0.999;
+
+//Choose relative permeability model
+relativePermeabilityModel  VanGenuchten;
+
+//Choose capillary pressure model
+capillarityModel           VanGenuchten;
+
+//Choose model parameters
+VanGenuchtenCoeffs
+{
+    //irriducible wetting fluid saturation for pc model
+    alpha.wettingminpc alpha.wettingminpc [0 0 0 0 0 0 0] 0; 
+
+    //max. wetting fluid saturation for pc model
+    alpha.wettingmaxpc alpha.wettingmaxpc [0 0 0 0 0 0 0] 0.999;
+
+    //entry cappilary pressure   
+    pc0 pc0 [1 -1 -2 0 0 0 0] 100;
+
+    //non-dimensional coefficient
+    m 3; 
+}
+
+// ************************************************************************* //

@@ -31,6 +31,7 @@ divSchemes
     div(phi,alpha)  Gauss vanLeer;
     div(phirb,alpha) Gauss linear;
     div(((rho*nu)*dev2(T(grad(U))))) Gauss linear;
+    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
 }
 
 laplacianSchemes

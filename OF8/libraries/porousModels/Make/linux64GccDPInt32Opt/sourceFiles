@@ -1,0 +1,10 @@
+SOURCE = \
+relativePermeabilityModels/relativePermeabilityModel/relativePermeabilityModel.C \
+relativePermeabilityModels/relativePermeabilityModel/relativePermeabilityModelNew.C \
+relativePermeabilityModels/BrooksAndCorey/krBrooksAndCorey.C \
+relativePermeabilityModels/VanGenuchten/krVanGenuchten.C \
+capillarityModels/capillarityModel/capillarityModel.C \
+capillarityModels/capillarityModel/capillarityModelNew.C \
+capillarityModels/Linear/pcLinear.C \
+capillarityModels/VanGenuchten/pcVanGenuchten.C \
+capillarityModels/BrooksAndCorey/pcBrooksAndCorey.C 

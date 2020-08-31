@@ -1,0 +1,10 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+set -x
+
+# Compiling solvers 
+
+wmake libso libraries/porousInterfaceProperties/
+wmake libso libraries/porousImmiscibleIncompressibleTwoPhaseMixture/
+wmake all libraries/porousModels
+wmake all solvers
