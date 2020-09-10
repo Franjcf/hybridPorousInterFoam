@@ -196,9 +196,7 @@ Citing the Toolbox
 If you use this solver, please cite the following paper (theory) and the code (implementation):
 
 **Paper:**
-Carrillo, F. J., Bourg, I. C., Soulaine, C., 2020, Multiphase Flow Modelling in Multiscale Porous Media: An Open-Sourced Micro-Continuum Approach, arXiv:2003.08374
-
-https://arxiv.org/abs/2003.08374
+F.J. Carrillo et al., Multiphase flow modeling in multiscale porous media: An open-source micro-continuum approach, J. Comput. Phys. (2020), https://doi.org/10.1016/j.jcpx.2020.100073
 
 **Code:** 
 https://doi.org/10.5281/zenodo.3724707 (DOI: 10.5281/zenodo.3724707)
