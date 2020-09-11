@@ -101,3 +101,6 @@ forAll(Solidf,facei)
 	}
 }
 
+//Label for mesh refinement (we only want to refine at
+//the fluid-fluid interface in solid-free regions 
+volScalarField meshingIndicator("meshingIndicator",alpha1*(1-Solid));

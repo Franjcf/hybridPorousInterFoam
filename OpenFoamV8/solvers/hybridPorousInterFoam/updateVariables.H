@@ -1,4 +1,5 @@
 // Updating Relative Permeability Model
+autoPtr<relativePermeabilityModel> krModel = relativePermeabilityModel::New("krModel",transportProperties,alpha1);
 krModel->correct();
 kr1=krModel->krb();
 kr2=krModel->kra();
@@ -21,7 +22,7 @@ L2f = rho2*k0f*kr2f/mu2;
 Mf = M1f+M2f;
 Lf = L1f+L2f;
 
-//Calculating Drag Coefficient
+// Calculating Drag Coefficient
 Dragf =1./Mf;
 Drag= fvc::average(Dragf);
 
@@ -39,4 +40,7 @@ dPcdS = myCapModel().dpcdS()*activateCapillarity;
 PcCoeff = (  
 	-pc
 	+(1./M)*(M1*(1.-alpha1) - M2*(alpha1))*dPcdS
-	);  
+	);
+
+//updating re-meshing indicatior
+meshingIndicator = alpha1*(1-Solid); 

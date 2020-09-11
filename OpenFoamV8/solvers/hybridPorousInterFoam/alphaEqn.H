@@ -1,6 +1,6 @@
 {
     #include "alphaScheme.H"
-    word alpharScheme("div(phi,alpha)");
+    word alpharScheme("div(phirb,alpha)"); //scheme for relative velocity in porous media
 
 
     // Set the off-centering coefficient according to ddt scheme
@@ -58,6 +58,9 @@
 
     tmp<surfaceScalarField> phiCN(phi);
 
+    // Standard face-flux compression coefficient
+    // surfaceScalarField phic(mixture.cAlpha()*mag(phi/mesh.magSf()));
+
     // Calculate the Crank-Nicolson off-centred volumetric flux
     if (ocCoeff > 0)
     {
@@ -69,29 +72,28 @@
     }
 
     //Calculating Porous Media Velocities
-    Uwetting = Solid*M1*(
-         - fvc::grad(p)
-         + (1.-alpha1)*fvc::grad(pc)
-         -  pc*fvc::grad(alpha1)
-         +  rho1*g
-         );
-
-    UnonWetting = Solid*M2*(
-         -fvc::grad(p)
-         -alpha1*fvc::grad(pc)
-         -pc*fvc::grad(alpha1)
-         +rho2*g
-        );
-
-    Uwetting.correctBoundaryConditions();
-    UnonWetting.correctBoundaryConditions();
+    #include "updateDarcyVelocities.H"
 
     // Defining relative velocity
     Ur = ( Uwetting/max(alpha1,0.001) - UnonWetting/max((1.-alpha1),0.001) )/eps;
     surfaceScalarField phirPore(fvc::interpolate(Ur) & mesh.Sf());
 
+    //surfaceScalarField::Boundary& phicBf =
+    //phic.boundaryFieldRef();
     surfaceScalarField::Boundary& phirPoreBf =
         phirPore.boundaryFieldRef();
+
+    // Do not compress interface at non-coupled boundary faces
+    // (inlets, outlets etc.)
+    //forAll(phic.boundaryField(), patchi)
+    // {
+    //    fvsPatchScalarField& phicp = phicBf[patchi];
+    //
+    //  if (!phicp.coupled())
+    //      {
+    //		phicp == 0;
+    //      }
+    //}
 
     // Correcting Ur at boundaries
     forAll(phirPore.boundaryField(), patchi)
@@ -182,7 +184,10 @@
     for (int aCorr=0; aCorr<nAlphaCorr; aCorr++)
     {
         #include "alphaSuSp.H"
-  
+
+        //surfaceScalarField phir(Solidf*phirPore+(1.-Solidf)*phic*mixture.nHatf());
+
+ 
         // Split operator
         tmp<surfaceScalarField> talphaPhi1Un
         (
@@ -210,6 +215,22 @@
                 alpharScheme
             )
             )
+
+            //Alternative flux formulation (better porous contact angle results
+            //but no fancy (i.e. PLIC) interface compression schemes.
+            //(fvc::flux
+            //(
+            //    phiCN(),
+            //    (cnCoeff*alpha1 + (1.0 - cnCoeff)*alpha1.oldTime())(),
+            //    alpharScheme
+            //)
+            //+ fvc::flux
+            //(
+            //    -fvc::flux(-phir, (alpha2*eps), alpharScheme),
+            //    alpha1,
+            //    alpharScheme
+            //)
+            //)
         );  
 
         if (MULESCorr)

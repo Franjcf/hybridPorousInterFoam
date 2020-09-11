@@ -40,7 +40,6 @@ Description
 #include "CrankNicolsonDdtScheme.H"
 #include "subCycle.H"
 #include "porousImmiscibleIncompressibleTwoPhaseMixture.H"
-//#include "immiscibleIncompressibleTwoPhaseMixture.H"
 #include "kinematicMomentumTransportModel.H"
 #include "pimpleControl.H"
 #include "fvOptions.H"
@@ -112,9 +111,6 @@ int main(int argc, char *argv[])
                         talphaPhi1Corr0.clear();
                     }
 
-                    gh = (g & mesh.C()) - ghRef;
-                    ghf = (g & mesh.Cf()) - ghRef;
-
                     MRF.update();
 
                     if (correctPhi)
@@ -128,8 +124,10 @@ int main(int argc, char *argv[])
                         // Make the flux relative to the mesh motion
                         fvc::makeRelative(phi, U);
                     }
-
+                    
                     mixture.correct();
+                    #include "updateVariables.H"
+                    #include "updateDarcyVelocities.H"
 
                     if (checkMeshCourantNo)
                     {
