@@ -24,13 +24,7 @@ Lf = L1f+L2f;
 
 // Calculating Drag Coefficient
 Dragf =1./Mf;
-Drag= fvc::average(Dragf);
-
-forAll(Drag,celli)
-{
-	if (Solid[celli] == 0)
-		{Drag[celli]= 0;}
-}
+Drag= fvc::average(Dragf)*Solid;
 
 // Updating Capillary Pressure Model
 autoPtr<capillarityModel> myCapModel = capillarityModel::New("pc",transportProperties,alpha1);
@@ -42,5 +36,13 @@ PcCoeff = (
 	+(1./M)*(M1*(1.-alpha1) - M2*(alpha1))*dPcdS
 	);
 
-//updating re-meshing indicatior
-meshingIndicator = alpha1*(1-Solid); 
+//updating re-meshing indicatior for dynamic meshes
+if (mesh.changing())
+   {
+	meshingIndicator = alpha1;
+	forAll(meshingIndicator,celli)
+	{
+        	if (Solid[celli] == 1)
+                {meshingIndicator[celli]= -10;}
+	}
+   }
