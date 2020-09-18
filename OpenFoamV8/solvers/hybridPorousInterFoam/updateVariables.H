@@ -36,13 +36,10 @@ PcCoeff = (
 	+(1./M)*(M1*(1.-alpha1) - M2*(alpha1))*dPcdS
 	);
 
-//updating re-meshing indicatior for dynamic meshes
-if (mesh.changing())
-   {
-	meshingIndicator = alpha1;
-	forAll(meshingIndicator,celli)
-	{
-        	if (Solid[celli] == 1)
-                {meshingIndicator[celli]= -10;}
-	}
-   }
+//updating re-meshing indicatior for dynamic meshe
+meshingIndicator = alpha1;
+forAll(meshingIndicator,celli)
+{
+       	if (Solid[celli] == 1)
+        {meshingIndicator[celli]= -10;}
+}
