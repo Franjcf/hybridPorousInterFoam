@@ -57,6 +57,8 @@ void Foam::interfaceProperties::correctContactAngle
 
     const fvBoundaryMesh& boundary = mesh.boundary();
 
+    //volScalarField Solid_ = alpha1_.mesh().lookupObject<volScalarField>("Solid");
+
     forAll(boundary, patchi)
     {
         if (isA<alphaContactAngleFvPatchScalarField>(abf[patchi]))
@@ -100,6 +102,7 @@ void Foam::interfaceProperties::correctContactAngle
             nHatp = a*nf + b*nHatp;
             nHatp /= (mag(nHatp) + deltaN_.value());
 
+   //         acap.gradient() = (1.-Solid_)*(nf & nHatp)*mag(gradAlphaf[patchi]);
             acap.gradient() = (nf & nHatp)*mag(gradAlphaf[patchi]);
             acap.evaluate();
         }

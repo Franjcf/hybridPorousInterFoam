@@ -40,6 +40,6 @@ PcCoeff = (
 meshingIndicator = alpha1;
 forAll(meshingIndicator,celli)
 {
-       	if (Solid[celli] == 1)
+       	if (Solid[celli] == 1  && gradSolid[celli] == 0)
         {meshingIndicator[celli]= -10;}
 }
